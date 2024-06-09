@@ -18,10 +18,8 @@
             tapping-term-ms = <1000>;
             quick-tap-ms = <250>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions =  < K05, K06, K07, K08, K09, \
-                                            K15, K16, K17, K18, K19, \
-                                            K25, K26, K27, K28, K29, \
-                                            K35, K36, K37, N38, N39 >;
+            hold-trigger-key-positions =  <05 06 07 08 09 15 16 17 18 19\
+                                           25 26 27 28 29 35 36 37 38 39>;
             hold-trigger-on-release = 1;
         };
     };
