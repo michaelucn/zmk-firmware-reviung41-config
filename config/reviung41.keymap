@@ -52,7 +52,7 @@
 &sk {
     quick-release;
     lazy;
-}
+};
 
 / {
         keymap {
