@@ -41,6 +41,26 @@
     };
 };
 
+/ {
+        conditional_layers {
+                compatible = "zmk,conditional_layers";
+                tri_layer {
+                        if-layers = <1 2>;
+                        then-layer = <3>;
+                };
+        };
+};
+
+/ {
+        combos {
+                compatible = "zmk,combos";
+                combo_bracket_r {
+                        key-positions = <7 19>;
+                        layers = <0>;
+                        bindings = <&kp RIGHT_PARENTHESIS>
+                };
+        };
+};
 &sk {
     quick-release;
     lazy;
