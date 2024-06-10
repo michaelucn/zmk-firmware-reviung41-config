@@ -57,7 +57,7 @@
                 combo_bracket_r {
                         key-positions = <7 19>;
                         layers = <0>;
-                        bindings = <&kp RIGHT_PARENTHESIS>
+                        bindings = <&kp RIGHT_PARENTHESIS>;
                 };
         };
 };
