@@ -86,7 +86,7 @@
     &none  &bt BT_SEL 0  &skm LGUI LGUI &skm LCTRL LCTRL &skm LSHFT LSHFT &ext_power EP_TOG         &kp LEFT     &kp DOWN       &kp UP       &kp RIGHT    &caps_word   &none
 // ├──────┼─────────────┼──────────────┼────────────────┼────────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼──────┤
 // |      |     BT3     |     BT2      |     BT1        |    LALT        |   OUT TOG   | |    HOME     |  PAGE DOWN  |   PAGE UP   |     END     |   INSERT    |      |
-    &none  &bt BT_SEL 3   &bt BT_SEL 2  &bt BT_SEL 1      &skm LALT LALT  &ext_power OUT_TOG        &kp HOME    &kp PG_DN    &kp PG_UP      &kp END      &kp INS     &none
+    &none  &bt BT_SEL 3   &bt BT_SEL 2  &bt BT_SEL 1      &skm LALT LALT  &ext_power OUT_TOG &kp HOME    &kp PG_DN    &kp PG_UP      &kp END      &kp INS     &none
 // ╰──────┴─────────────┴──────────────┴────────────┬───┴─────────┬──────┴──────┬──────┴─┴──────┬──────┴─────────────┴──────┬──────┴─────────────┴─────────────┴──────╯
 //                                                  |             | TRANSPARENT |      TAB      | TRANSPARENT |             |
                                                          &none        &trans         &kp TAB        &trans         &none
