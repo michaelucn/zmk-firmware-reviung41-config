@@ -108,7 +108,7 @@
     &none     &none         &kp N6        &kp N5        &kp N4       &kp HASH          &none      &hmr RALT CARET      &kp TILDE       &kp GRAVE       &none     &none
 // ╰──────┴─────────────┴─────────────┴──────┬──────┴──────┬──────┴──────┬──────┴─┴──────┬──────┴─────────────────┴──┬──────────────┴─────────────┴─────────────┴──────╯
 //                                           |   DELETE    | TRANSPARENT |  TRANSPARENT  | TRANSPARENT |             |
-                                                  &DEL         &trans         &trans         &trans         &none
+                                                &kp DEL         &trans         &trans         &trans        &none
 //                                           ╰─────────────┴─────────────┴───────────────┴─────────────┴─────────────╯
                         >;
                 };
