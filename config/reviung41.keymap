@@ -162,14 +162,14 @@
                 num_layer {
                         bindings = <
 // ╭──────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────────┬─────────────────┬──────────────┬─────────────┬──────╮
-// |      |             |      7      |      8      |      9      |      |      | |      %      |        $        |        &        |      ~       |             |      |
-    &none     &none         &kp N7        &kp N8        &kp N9       &kp PIPE        &kp PRCNT       &kp DLLR          &kp AMPS        &kp TILDE        &none     &none
+// |      |             |      7      |      8      |      9      |      @      | |             |        ~        |        `        |              |             |      |
+    &none     &none         &kp N7        &kp N8        &kp N9        &kp AT           &none         &kp TILDE         &kp GRAVE         &none          &none     &none
 // ├──────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────────┼─────────────────┼──────────────┼─────────────┼──────┤
-// |      |      3      |      2      |      1      |      0      |      @      | |      _      |        =        |        -        |      +       |      *      |      |
-    &none     &kp N3        &kp N2        &kp N1        &kp N0        &kp AT         &kp UNDER   &hmr RSHIFT EQUAL &hmr RCTRL MINUS  &hmr RGUI PLUS   &kp ASTRK   &none
+// |      |      3      |      2      |      1      |      0      |      #      | |      %      |        &        |        $        |      !       |             |      |
+    &none     &kp N3        &kp N2        &kp N1        &kp N0       &kp HASH        &kp PRCNT   &hmr RSHIFT AMPS   &hmr RCTRL DLLR  &hmr RGUI EXCL     &none     &none
 // ├──────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────────┼─────────────────┼──────────────┼─────────────┼──────┤
-// |      |             |      6      |      5      |      4      |      #      | |             |        ^        |        `        |      '       |      "      |      |
-    &none     &none         &kp N6        &kp N5        &kp N4       &kp HASH          &none      &hmr RALT CARET      &kp GRAVE        &kp SQT        &kp DQT    &none
+// |      |             |      6      |      5      |      4      |             | |             |        ^        |                 |              |             |      |
+    &none     &none         &kp N6        &kp N5        &kp N4         &none           &none      &hmr RALT CARET        &none           &none          &none     &none
 // ╰──────┴─────────────┴─────────────┴──────┬──────┴──────┬──────┴──────┬──────┴─┴──────┬──────┴─────────────────┴──┬──────────────┴──────────────┴─────────────┴──────╯
 //                                           |   DELETE    | TRANSPARENT |      ESC      | TRANSPARENT |             |
                                                  &kp DEL        &trans        &kp ESC         &trans        &none
