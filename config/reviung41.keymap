@@ -67,7 +67,8 @@
                         bindings = <&kp RIGHT_PARENTHESIS>;
                 };
         };
-}o
+};
+
 &sk {
     quick-release;
     lazy;
