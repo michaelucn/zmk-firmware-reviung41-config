@@ -115,8 +115,8 @@
 };
 
 &sk {
-    quick-release;
-    lazy;
+        quick-release;
+        lazy;
 };
 
 / {
