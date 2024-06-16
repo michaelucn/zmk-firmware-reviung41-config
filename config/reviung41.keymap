@@ -164,14 +164,14 @@
                 num_layer {
                         bindings = <
 // ╭──────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────────┬─────────────────┬──────────────┬─────────────┬──────╮
-// |      |             |      7      |      8      |      9      |      @      | |             |        ~        |        `        |              |             |      |
-    &none     &none         &kp N7        &kp N8        &kp N9        &kp AT           &none         &kp TILDE         &kp GRAVE         &none          &none     &none
+// |      |             |      7      |      8      |      9      |      %      | |             |        ~        |        `        |              |             |      |
+    &none     &none         &kp N7        &kp N8        &kp N9       &kp PRCNT          &none         &kp TILDE         &kp GRAVE         &none          &none     &none
 // ├──────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────────┼─────────────────┼──────────────┼─────────────┼──────┤
-// |      |      3      |      2      |      1      |      0      |      #      | |      %      |        &        |        $        |      !       |             |      |
-    &none     &kp N3        &kp N2        &kp N1        &kp N0       &kp HASH        &kp PRCNT   &hmr RSHIFT AMPS   &hmr RCTRL DLLR  &hmr RGUI EXCL     &none     &none
+// |      |      3      |      2      |      1      |      0      |      @      | |             |        &        |        $        |      !       |             |      |
+    &none     &kp N3        &kp N2        &kp N1        &kp N0        &kp AT           &none     &hmr RSHIFT AMPS   &hmr RCTRL DLLR  &hmr RGUI EXCL     &none     &none
 // ├──────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────────┼─────────────────┼──────────────┼─────────────┼──────┤
-// |      |             |      6      |      5      |      4      |             | |             |        ^        |                 |              |             |      |
-    &none     &none         &kp N6        &kp N5        &kp N4         &none           &none      &hmr RALT CARET        &none           &none          &none     &none
+// |      |             |      6      |      5      |      4      |      #      | |             |        ^        |                 |              |             |      |
+    &none     &none         &kp N6        &kp N5        &kp N4       &kp HASH          &none      &hmr RALT CARET        &none           &none          &none     &none
 // ╰──────┴─────────────┴─────────────┴──────┬──────┴──────┬──────┴──────┬──────┴─┴──────┬──────┴─────────────────┴──┬──────────────┴──────────────┴─────────────┴──────╯
 //                                           |   DELETE    | TRANSPARENT |      ESC      | TRANSPARENT |             |
                                                  &kp DEL        &trans        &kp ESC         &trans        &none
@@ -188,7 +188,7 @@
 // |      |             |    LGUI     |    LCTRL    |   LSHIFT    |     F6      | |     F7      |   LSHIFT    |    LCTRL    |    RGUI     |             |      |
     &none      &none       &kp LGUI      &kp LCTRL     &kp LSHFT      &kp F6          &kp F7       &kp LSHFT     &kp LCTRL     &kp RGUI        &none     &none
 // ├──────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼──────┤
-// |      | SCROLLLOCK  | PAUSE/BREAK | PRNT SCREEN |    LALT     |      #      | |             |    LALT     |             |             |             |      |
+// |      | SCROLLLOCK  | PAUSE/BREAK | PRNT SCREEN |    LALT     |     󰐥      | |             |    LALT     |             |             |             |      |
     &none    &kp SLCK   &kp PAUSE_BREAK  &kp PSCRN     &kp LALT      &soft_off         &none       &kp LALT        &none         &none         &none     &none
 // ╰──────┴─────────────┴─────────────┴──────┬──────┴──────┬──────┴──────┬──────┴─┴──────┬──────┴──────┬──────┴──────┬──────┴─────────────┴─────────────┴──────╯
 //                                           |             | TRANSPARENT |  TRANSPARENT  | TRANSPARENT |             |
