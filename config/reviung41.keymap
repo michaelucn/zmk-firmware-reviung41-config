@@ -144,14 +144,14 @@
                 nav_layer {
                         bindings = <
 // ╭──────┬─────────────┬──────────────┬──────────────┬────────────────┬─────────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬──────╮
-// |      |      󰝟      |      󰒮       |      󰐊       |       󰒭        |        󰓛        | |      H      |      J      |      K      |      L      |      V      |      |
-    &none    &kp C_MUTE    &kp C_PREV      &kp C_PP       &kp C_NEXT       &kp C_STOP           &kp H         &kp J         &kp K         &kp L         &kp V     &none
+// |      |      󰝟      |      󰒮       |      󰐊       |       󰒭        |        󰓛        | |      󰜱      |      󰜮      |      󰜷      |      󰜴      |  CAPS WORD  |      |
+    &none    &kp C_MUTE    &kp C_PREV      &kp C_PP       &kp C_NEXT       &kp C_STOP          &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT    &caps_word   &none
 // ├──────┼─────────────┼──────────────┼──────────────┼────────────────┼─────────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼──────┤
-// |      |     BT0     |    LGUI      |    LCTRL     |     LSHIFT     |     EP TOG      | |      󰜱      |      󰜮      |      󰜷      |      󰜴      |  CAPS WORD  |      |
-    &none  &bt BT_SEL 0     &kp LGUI      &kp LCTRL       &kp LSHFT     &ext_power EP_TOG      &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT    &caps_word   &none
+// |      |     BT0     |    LGUI      |    LCTRL     |     LSHIFT     |     OUT TOG     | |      H      |      J      |      K      |      L      |      V      |      |
+    &none  &bt BT_SEL 0     &kp LGUI      &kp LCTRL       &kp LSHFT        &out OUT_TOG         &kp H         &kp J         &kp K         &kp L         &kp V     &none
 // ├──────┼─────────────┼──────────────┼──────────────┼────────────────┼─────────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼──────┤
-// |      |     BT3     |     BT2      |     BT1      |      LALT      |     OUT TOG     | |    HOME     |  PAGE DOWN  |   PAGE UP   |     END     |   INSERT    |      |
-    &none  &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1      &kp LALT        &out OUT_TOG       &kp HOME      &kp PG_DN     &kp PG_UP      &kp END       &kp INS    &none
+// |      |     BT3     |     BT2      |     BT1      |      LALT      |                 | |    HOME     |  PAGE DOWN  |   PAGE UP   |     END     |   INSERT    |      |
+    &none  &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1      &kp LALT           &none           &kp HOME      &kp PG_DN     &kp PG_UP      &kp END       &kp INS    &none
 // ╰──────┴─────────────┴──────────────┴────────────┬─┴───────────┬────┴────────┬────────┴─┴────┬────────┴─────────────┴────┬────────┴─────────────┴─────────────┴──────╯
 //                                                  |             | TRANSPARENT |      TAB      | TRANSPARENT |  BACKSPACE  |
                                                          &none        &trans         &kp TAB        &trans       &kp BSPC
@@ -183,11 +183,11 @@
 // |      |     F1      |     F2      |     F3      |     F4      |     F5      | |     F8      |     F9      |     F10     |     F11     |     F12     |      |
     &none     &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F8        &kp F9        &kp F10       &kp F11       &kp F12    &none
 // ├──────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼──────┤
-// |      |      3      |    LGUI     |    LCTRL    |   LSHIFT    |     F6      | |     F7      |   LSHIFT    |    LCTRL    |    RGUI     |             |      |
-    &none     &kp N3       &kp LGUI      &kp LCTRL     &kp LSHFT      &kp F6          &kp F7       &kp LSHFT     &kp LCTRL     &kp RGUI        &none     &none
+// |      |             |    LGUI     |    LCTRL    |   LSHIFT    |     F6      | |     F7      |   LSHIFT    |    LCTRL    |    RGUI     |             |      |
+    &none      &none       &kp LGUI      &kp LCTRL     &kp LSHFT      &kp F6          &kp F7       &kp LSHFT     &kp LCTRL     &kp RGUI        &none     &none
 // ├──────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼──────┤
-// |      | SCROLLLOCK  | PAUSE/BREAK | PRNT SCREEN |    LALT     |      #      | |   RGB TOG   |    LALT     | RGB EFFECT  |             |             |      |
-    &none    &kp SLCK   &kp PAUSE_BREAK  &kp PSCRN     &kp LALT      &soft_off    &rgb_ug RGB_TOG  &kp LALT   &rgb_ug RGB_EFF    &none         &none     &none
+// |      | SCROLLLOCK  | PAUSE/BREAK | PRNT SCREEN |    LALT     |      #      | |             |    LALT     |             |             |             |      |
+    &none    &kp SLCK   &kp PAUSE_BREAK  &kp PSCRN     &kp LALT      &soft_off         &none       &kp LALT        &none         &none         &none     &none
 // ╰──────┴─────────────┴─────────────┴──────┬──────┴──────┬──────┴──────┬──────┴─┴──────┬──────┴──────┬──────┴──────┬──────┴─────────────┴─────────────┴──────╯
 //                                           |             | TRANSPARENT |  TRANSPARENT  | TRANSPARENT |             |
                                                   &none         &trans         &trans         &trans        &none
