@@ -54,13 +54,20 @@
 / {
         combos {
                 compatible = "zmk,combos";
+
+                combo_bracket_l {
+                        key-positions = <4 16>;
+                        layers = <0>;
+                        bindings = <&kp LEFT_PARENTHESIS>;
+                };
+
                 combo_bracket_r {
                         key-positions = <7 19>;
                         layers = <0>;
                         bindings = <&kp RIGHT_PARENTHESIS>;
                 };
         };
-};
+}o
 &sk {
     quick-release;
     lazy;
