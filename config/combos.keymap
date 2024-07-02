@@ -48,5 +48,7 @@
 
                 COMBO(inner_tucky_r, &kp AMPERSAND, <18 30>)
                 COMBO(inner_tucky_l, &kp PERCENT, <17 29>)
+
+                COMBO(caps_word, &caps_word, <16 19>)
         };
 };
