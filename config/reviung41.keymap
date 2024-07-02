@@ -78,12 +78,6 @@
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
 
-                marks: question_exclamation {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&kp QESTION>, <&kp EXCLAMATION>;
-                        mods = <(MOD_LSFT|MOD_RSFT)>;
-                };
         };
 };
 
@@ -94,69 +88,6 @@
                         if-layers = <1 2>;
                         then-layer = <3>;
                 };
-        };
-};
-
-/ {
-        combos {
-                compatible = "zmk,combos";
-
-                // Combos above homerow
-                combo_backslash {
-                        key-positions = <2 14>;
-                        layers = <0>;
-                        bindings = <&kp BACKSLASH>;
-                };
-
-                combo_bracket_l {
-                        key-positions = <3 15>;
-                        layers = <0>;
-                        bindings = <&kp LEFT_BRACKET>;
-                };
-
-                combo_parenthasis_l {
-                        key-positions = <4 16>;
-                        layers = <0>;
-                        bindings = <&kp LEFT_PARENTHESIS>;
-                };
-
-                combo_minus_l {
-                        key-positions = <5 17>;
-                        layers = <0>;
-                        bindings = <&kp MINUS>;
-                };
-
-                combo_equal_r {
-                        key-positions = <6 18>;
-                        layers = <0>;
-                        bindings = <&kp EQUAL>;
-                };
-
-                combo_parenthasis_r {
-                        key-positions = <7 19>;
-                        layers = <0>;
-                        bindings = <&kp RIGHT_PARENTHESIS>;
-                };
-
-                combo_bracket_r {
-                        key-positions = <8 20>;
-                        layers = <0>;
-                        bindings = <&kp RIGHT_BRACKET>;
-                };
-
-                combo_astrick {
-                        key-positions = <9 21>;
-                        layers = <0>;
-                        bindings = <&kp ASTERISK>;
-                };
-
-                // Combos below homerow
-                combo_quote {
-                        key-positions = <20 32>;
-                        layers = <0>;
-                        bindings = <&kp SINGLE_QUOTE>;
-                };
-
         };
 };
 
