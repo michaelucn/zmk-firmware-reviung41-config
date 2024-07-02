@@ -11,17 +11,24 @@
         morph_##NAME: morph_##NAME {\
                 compatible = "zmk,behavior-mod-morph";\
                 #binding-cells = <0>;\
-                bindings = <&kp KEY_0>, <&kp KEY_1>;\
+                bindings = <&kp ##KEY_0>, <&kp ##KEY_1>;\
                 mods = <(MOD_LSFT|MOD_RSFT)>;\
+        };
+
+#define COMBO(FINGER, KEY, KEY_POS)\
+        combo_##FINGER {\
+                key-positions = ##KEY_POS;\
+                layers = <0>;\
+                bindings = <&kp ##KEY>;\
         };
 
 / {
         behaviors {
-                MORPH(index_r, RIGHT_PARENTHESIS, SLASH)
-                MORPH(middle_r, RIGHT_BRACE, RIGHT_BRACKET)
+                MORPH(paren_slash_r, RIGHT_PARENTHESIS, SLASH)
+                MORPH(brace_bracket_r, RIGHT_BRACE, RIGHT_BRACKET)
 
-                MORPH(index_l, LEFT_PARENTHESIS, BACKSLASH)
-                MORPH(middle_r, LEFT_BRACE, LEFT_BRACKET)
+                MORPH(paren_slash_l, LEFT_PARENTHESIS, BACKSLASH)
+                MORPH(brace_bracket_r, LEFT_BRACE, LEFT_BRACKET)
         }
 };
 
@@ -29,61 +36,17 @@
         combos {
                 compatible = "zmk,combos";
 
-                // Combos above homerow
-                combo_backslash {
-                        key-positions = <2 14>;
-                        layers = <0>;
-                        bindings = <&kp BACKSLASH>;
-                };
+                COMBO(inner_r, PIPE, <6 18>)
+                COMBO(index_r, paren_slash_r, <7 19>)
+                COMBO(middle_r, brace_bracket_r, <8 20>)
+                COMBO(ring_r, EQUAL, <9 21>)
 
-                combo_bracket_l {
-                        key-positions = <3 15>;
-                        layers = <0>;
-                        bindings = <&kp LEFT_BRACKET>;
-                };
+                COMBO(inner_l, STAR, <5 17>)
+                COMBO(index_l, paren_slash_l, <4 16>)
+                COMBO(middle_l, brace_bracket_l, <3 15>)
+                COMBO(ring_l, MINUS, <2 14>)
 
-                combo_parenthasis_l {
-                        key-positions = <4 16>;
-                        layers = <0>;
-                        bindings = <&kp LEFT_PARENTHESIS>;
-                };
-
-                combo_minus_l {
-                        key-positions = <5 17>;
-                        layers = <0>;
-                        bindings = <&kp MINUS>;
-                };
-
-                combo_equal_r {
-                        key-positions = <6 18>;
-                        layers = <0>;
-                        bindings = <&kp EQUAL>;
-                };
-
-                combo_parenthasis_r {
-                        key-positions = <7 19>;
-                        layers = <0>;
-                        bindings = <&kp RIGHT_PARENTHESIS>;
-                };
-
-                combo_bracket_r {
-                        key-positions = <8 20>;
-                        layers = <0>;
-                        bindings = <&kp RIGHT_BRACKET>;
-                };
-
-                combo_astrick {
-                        key-positions = <9 21>;
-                        layers = <0>;
-                        bindings = <&kp ASTERISK>;
-                };
-
-                // Combos below homerow
-                combo_quote {
-                        key-positions = <20 32>;
-                        layers = <0>;
-                        bindings = <&kp SINGLE_QUOTE>;
-                };
-
+                COMBO(inner_tucky_r, AMPERSAND, <18 30>)
+                COMBO(inner_tucky_l, PERCENT, <17 29>)
         };
 };
