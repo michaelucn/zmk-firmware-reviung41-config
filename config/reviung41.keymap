@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <combos.keymap>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -73,7 +74,7 @@
                 
                 marks: question_exclamation {
                         compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
+                        #binding-cells = <2>;
                         bindings = <&kp QESTION>, <&kp EXCLAMATION>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
