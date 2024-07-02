@@ -74,7 +74,7 @@
                 
                 marks: question_exclamation {
                         compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <2>;
+                        #binding-cells = <0>;
                         bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
