@@ -7,11 +7,11 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define MORPH(NAME, KEY_0, KEY_1)\
+#define MORPH(NAME, BINDING_0, BINDING_1)\
         morph_##NAME: morph_##NAME {\
                 compatible = "zmk,behavior-mod-morph";\
                 #binding-cells = <0>;\
-                bindings = <&kp ##KEY_0>, <&kp ##KEY_1>;\
+                bindings = <##BINDING_0>, <##BINDING_1>;\
                 mods = <(MOD_LSFT|MOD_RSFT)>;\
         };
 
@@ -24,11 +24,11 @@
 
 / {
         behaviors {
-                MORPH(paren_slash_r, RIGHT_PARENTHESIS, SLASH)
-                MORPH(brace_bracket_r, RIGHT_BRACE, RIGHT_BRACKET)
+                MORPH(paren_slash_r, &kp RIGHT_PARENTHESIS, &kp SLASH)
+                MORPH(brace_bracket_r, &kp RIGHT_BRACE, &kp RIGHT_BRACKET)
 
-                MORPH(paren_slash_l, LEFT_PARENTHESIS, BACKSLASH)
-                MORPH(brace_bracket_l, LEFT_BRACE, LEFT_BRACKET)
+                MORPH(paren_slash_l, &kp LEFT_PARENTHESIS, &kp BACKSLASH)
+                MORPH(brace_bracket_l, &kp LEFT_BRACE, &kp LEFT_BRACKET)
         };
 };
 
