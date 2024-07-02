@@ -29,6 +29,17 @@
         };\
 / {
         behaviors {
+                tst: test {
+                        compatible = "zmk,behavior-hold-tap";\
+                        #binding-cells = <2>;\
+                        flavor = "balanced";\
+                        bindings = <&kp>, <&kp>;\
+                        tapping-term-ms = <500>;\
+                        quick-tap-ms = <200>;\
+                        require-prior-idle-ms = <0>;\
+                        hold-trigger-on-release;\
+                        hold-trigger-key-positions = <1>;\
+                }
                 HM(l, RIGHT_KEYS, 0)
                 HM(ls, RIGHT_KEYS, 200)
 
