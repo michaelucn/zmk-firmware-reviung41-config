@@ -19,7 +19,7 @@
         combo_##FINGER {\
                 key-positions = ##KEY_POS;\
                 layers = <0>;\
-                bindings = <&kp ##KEY>;\
+                bindings = <##KEY>;\
         };
 
 / {
@@ -36,17 +36,17 @@
         combos {
                 compatible = "zmk,combos";
 
-                COMBO(inner_r, PIPE, <6 18>)
-                COMBO(index_r, paren_slash_r, <7 19>)
-                COMBO(middle_r, brace_bracket_r, <8 20>)
-                COMBO(ring_r, EQUAL, <9 21>)
+                COMBO(inner_r, &kp PIPE, <6 18>)
+                COMBO(index_r, &paren_slash_r, <7 19>)
+                COMBO(middle_r, &brace_bracket_r, <8 20>)
+                COMBO(ring_r, &kp EQUAL, <9 21>)
 
-                COMBO(inner_l, STAR, <5 17>)
-                COMBO(index_l, paren_slash_l, <4 16>)
-                COMBO(middle_l, brace_bracket_l, <3 15>)
-                COMBO(ring_l, MINUS, <2 14>)
+                COMBO(inner_l, &kp STAR, <5 17>)
+                COMBO(index_l, &paren_slash_l, <4 16>)
+                COMBO(middle_l, &brace_bracket_l, <3 15>)
+                COMBO(ring_l, &kp MINUS, <2 14>)
 
-                COMBO(inner_tucky_r, AMPERSAND, <18 30>)
-                COMBO(inner_tucky_l, PERCENT, <17 29>)
+                COMBO(inner_tucky_r, &kp AMPERSAND, <18 30>)
+                COMBO(inner_tucky_l, &kp PERCENT, <17 29>)
         };
 };
