@@ -28,8 +28,8 @@
                 MORPH(brace_bracket_r, RIGHT_BRACE, RIGHT_BRACKET)
 
                 MORPH(paren_slash_l, LEFT_PARENTHESIS, BACKSLASH)
-                MORPH(brace_bracket_r, LEFT_BRACE, LEFT_BRACKET)
-        }
+                MORPH(brace_bracket_l, LEFT_BRACE, LEFT_BRACKET)
+        };
 };
 
 / {
