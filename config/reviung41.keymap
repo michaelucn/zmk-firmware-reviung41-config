@@ -16,7 +16,7 @@
 #define LEFT_KEYS <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38 39 40>
 
 #define HM(NAME, HOLD_TRIGGER_KEYS, REQUIRED_IDLE)\
-        ##NAME: homerow_mods_##NAME {\
+        hm##NAME: homerow_mods_##NAME {\
                 compatible = "zmk,behavior-hold-tap";\
                 #binding-cells = <2>;\
                 flavor = "balanced";\
@@ -29,11 +29,11 @@
         };\
 / {
         behaviors {
-                HM(hml, RIGHT_KEYS, 0)
-                HM(hmls, RIGHT_KEYS, 200)
+                HM(l, RIGHT_KEYS, 0)
+                HM(ls, RIGHT_KEYS, 200)
 
-                HM(hmr, LEFT_KEYS, 0)
-                HM(hmrs, LEFT_KEYS, 200)
+                HM(r, LEFT_KEYS, 0)
+                HM(rs, LEFT_KEYS, 200)
 
                 marks: question_exclamation {
                         compatible = "zmk,behavior-mod-morph";
