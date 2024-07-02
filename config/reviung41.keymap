@@ -112,9 +112,9 @@
 
                 nav_layer {
                         bindings = <
-&none  &kp C_MUTE    &kp C_PREV    &kp C_PP      &kp C_NEXT  &kp C_STOP  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &K_CMENU  &none
-&none  &bt BT_SEL 3  &kp LGUI      &kp LCTRL     &kp LSHFT   &none       &kp H     &kp J      &kp K      &kp L      &kp V     &none
-&none  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &kp LALT    &BT_CLR     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp INS   &none
+&none  &kp C_MUTE    &kp C_PREV    &kp C_PP      &kp C_NEXT  &kp C_STOP  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp K_CMENU  &none
+&none  &bt BT_SEL 3  &kp LGUI      &kp LCTRL     &kp LSHFT   &none       &kp H     &kp J      &kp K      &kp L      &kp V        &none
+&none  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &kp LALT    &BT_CLR     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp INS      &none
 &none  &none  &kp TAB  &kp BSPC  &none
                         >;
                 };
