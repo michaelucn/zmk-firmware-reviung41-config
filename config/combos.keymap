@@ -15,8 +15,9 @@
                         bindings = <&kp RIGHT_PARENTHESIS>, <&kp EXCLAMATION>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
-        }
-}
+        };
+};
+
 / {
         combos {
                 compatible = "zmk,combos";
