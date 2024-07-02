@@ -70,6 +70,20 @@
                                                        25 26 27 28 29 \
                                                        36 37 38 39 40>;
                 };
+                
+                marks: question_exclamation {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp QESTION>, <&kp EXCLAMATION>;
+                        mods = <(MOD_LSFT|MOD_RSFT)>;
+                };
+
+                marks: question_exclamation {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp QESTION>, <&kp EXCLAMATION>;
+                        mods = <(MOD_LSFT|MOD_RSFT)>;
+                };
         };
 };
 
@@ -157,7 +171,7 @@
 
                 default_layer {
                         bindings = <
-&none  &kp Q  &kp Y        &kp G         &kp U           &kp Z      &kp EXCL  &kp L           &kp D         &kp W        &kp V  &none
+&none  &kp Q  &kp Y        &kp G         &kp U           &kp Z      &marks    &kp L           &kp D         &kp W        &kp V  &none
 &none  &kp C  &hml LGUI I  &hml LCTRL O  &hrsl LSHIFT A  &kp COMMA  &kp DOT   &hrsr RSHIFT R  &hmr RCTRL T  &hmr RGUI S  &kp N  &none
 &none  &kp B  &kp X        &kp J         &hml LALT K     &kp DQT    &kp SEMI  &hmr RALT H     &kp P         &kp F        &kp P  &none
 &kp RET  &lt 1 E  &kp ESC  &lt 2 SPACE  &TAB
