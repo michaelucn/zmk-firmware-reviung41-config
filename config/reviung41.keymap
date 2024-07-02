@@ -12,66 +12,29 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#define RIGHT_KEYS <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 36 37 38 39 40>
+#define LEFT_KEYS <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38 39 40>
+
+#define HM(NAME, HOLD_TRIGGER_KEYS, REQUIRED_IDLE)\
+        ##NAME: homerow_mods_##NAME {\
+                compatible = "zmk,behavior-hold-tap";\
+                #binding-cells = <2>;\
+                flavor = "balanced";\
+                bindings = <&kp>, <&kp>;\
+                tapping-term-ms = <500>;\
+                quick-tap-ms = <200>;\
+                require-prior-idle-ms = <##REQUIRED_IDLE>;\
+                hold-trigger-on-release;\
+                hold-trigger-key-positions = ##HOLD_TRIGGER_KEYS;\
+        };\
 / {
         behaviors {
-                hml: homerow_mods_left {
-                        compatible = "zmk,behavior-hold-tap";
-                        #binding-cells = <2>;
-                        flavor = "balanced";
-                        bindings = <&kp>, <&kp>;
-                        tapping-term-ms = <500>;
-                        quick-tap-ms = <200>;
-                        require-prior-idle-ms = <200>;
-                        hold-trigger-on-release;
-                        hold-trigger-key-positions =  <6 7 8 9 10 \
-                                                       18 19 20 21 22 \
-                                                       30 31 32 33 34 \
-                                                       36 37 38 39 40>;
-                };
+                HM(hml, RIGHT_KEYS, 0)
+                HM(hmls, RIGHT_KEYS, 200)
 
-                hrsl: homerow_shift_left {
-                        compatible = "zmk,behavior-hold-tap";
-                        #binding-cells = <2>;
-                        flavor = "balanced";
-                        bindings = <&kp>, <&kp>;
-                        tapping-term-ms = <500>;
-                        quick-tap-ms = <200>;
-                        hold-trigger-on-release;
-                        hold-trigger-key-positions =  <6 7 8 9 10 \
-                                                       18 19 20 21 22 \
-                                                       30 31 32 33 34 \
-                                                       36 37 38 39 40>;
-                };
+                HM(hmr, LEFT_KEYS, 0)
+                HM(hmrs, LEFT_KEYS, 200)
 
-                hmr: homerow_mods_right {
-                        compatible = "zmk,behavior-hold-tap";
-                        #binding-cells = <2>;
-                        flavor = "balanced";
-                        bindings = <&kp>, <&kp>;
-                        tapping-term-ms = <500>;
-                        quick-tap-ms = <200>;
-                        require-prior-idle-ms = <200>;
-                        hold-trigger-on-release;
-                        hold-trigger-key-positions =  <1 2 3 4 5 \
-                                                       13 14 15 16 17 \
-                                                       25 26 27 28 29 \
-                                                       36 37 38 39 40>;
-                };
-
-                hrsr: homerow_shift_right {
-                        compatible = "zmk,behavior-hold-tap";
-                        #binding-cells = <2>;
-                        flavor = "balanced";
-                        bindings = <&kp>, <&kp>;
-                        tapping-term-ms = <500>;
-                        quick-tap-ms = <200>;
-                        hold-trigger-on-release;
-                        hold-trigger-key-positions =  <1 2 3 4 5 \
-                                                       13 14 15 16 17 \
-                                                       25 26 27 28 29 \
-                                                       36 37 38 39 40>;
-                };
-                
                 marks: question_exclamation {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
@@ -104,7 +67,7 @@
                 default_layer {
                         bindings = <
 &none  &kp Q  &kp Y        &kp G         &kp U           &kp Z      &marks    &kp L           &kp D         &kp W        &kp V  &none
-&none  &kp C  &hml LGUI I  &hml LCTRL O  &hrsl LSHIFT A  &kp COMMA  &kp DOT   &hrsr RSHIFT R  &hmr RCTRL T  &hmr RGUI S  &kp N  &none
+&none  &kp C  &hml LGUI I  &hml LCTRL O  &hmls LSHIFT A  &kp COMMA  &kp DOT   &hmrs RSHIFT R  &hmr RCTRL T  &hmr RGUI S  &kp N  &none
 &none  &kp B  &kp X        &kp J         &hml LALT K     &kp DQT    &kp SEMI  &hmr RALT H     &kp P         &kp F        &kp P  &none
 &kp RET  &lt 1 E  &kp ESC  &lt 2 SPACE  &kp TAB
                         >;
