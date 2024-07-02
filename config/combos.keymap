@@ -22,6 +22,10 @@
                 bindings = <##KEY>;\
         };
 
+&caps_word {
+        continue-list = <UNDERSCORE MINUS>;
+};
+
 / {
         behaviors {
                 MORPH(paren_slash_r, &kp RIGHT_PARENTHESIS, &kp SLASH)

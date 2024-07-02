@@ -55,11 +55,6 @@
         };
 };
 
-&sk {
-        quick-release;
-        lazy;
-};
-
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -78,7 +73,7 @@
 &none  &kp C_MUTE    &kp C_PREV    &kp C_PP      &kp C_NEXT  &kp C_STOP  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp K_CMENU  &none
 &none  &bt BT_SEL 3  &kp LGUI      &kp LCTRL     &kp LSHFT   &none       &kp H     &kp J      &kp K      &kp L      &kp V        &none
 &none  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &kp LALT    &bt BT_CLR     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp INS      &none
-&none  &none  &kp TAB  &kp BSPC  &none
+&none  &none  &kp RET  &kp BSPC  &none
                         >;
                 };
 
@@ -87,7 +82,7 @@
 &none  &none   &kp N9  &kp N8  &kp N7  &none     &none  &none               &none             &none            &none      &none
 &none  &kp N3  &kp N2  &kp N1  &kp N0  &kp HASH  &none  &hmr RSHIFT DOLLAR  &hmr RCTRL CARET  &hmr RGUI TILDE  &kp GRAVE  &none
 &none  &none   &kp N6  &kp N5  &kp N4  &kp AT    &none  &kp RALT            &none             &none            &none      &none
-&none  &kp DEL  &kp RET  &none  &none
+&none  &kp DEL  &kp TAB  &none  &none
                         >;
                 };
 
