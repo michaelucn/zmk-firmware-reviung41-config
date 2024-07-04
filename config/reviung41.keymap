@@ -61,10 +61,10 @@
 
                 default_layer {
                         bindings = <
-&none  &kp Q  &kp Y        &kp G         &kp U           &kp Z      &marks    &kp L           &kp D         &kp W        &kp V  &none
-&none  &kp C  &hml LGUI I  &hml LCTRL O  &hmls LSHIFT A  &kp COMMA  &kp DOT   &hmrs RSHIFT R  &hmr RCTRL T  &hmr RGUI S  &kp N  &none
-&none  &kp B  &kp X        &kp J         &hml LALT K     &kp DQT    &kp SEMI  &hmr RALT H     &kp P         &kp F        &kp P  &none
-&kp RET  &lt 1 E  &kp ESC  &lt 2 SPACE  &kp TAB
+&none    &kp U      &kp J        &kp O         &kp F           &kp SQT  &kp Z     &kp D           &kp W         &kp L        &kp B  &none
+&none    &kp K      &hml LGUI I  &hml LCTRL A  &hmls LSHIFT H  &kp Y    &kp G     &hmrs RSHIFT T  &hmr RCTRL S  &hmr RGUI R  &kp N  &none
+&none    &kp COMMA  &kp DOT      &kp Q         &hml LALT P     &marks   &kp SEMI  &hmr RALT M     &kp C         &kp X        &kp V  &none
+&kp RET  &lt 1 E    &kp ESC      &lt 2 SPACE   &kp TAB
                         >;
                 };
 
@@ -72,17 +72,17 @@
                         bindings = <
 &none  &kp C_MUTE    &kp C_PREV    &kp C_PP      &kp C_NEXT  &kp C_STOP  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp K_CMENU  &none
 &none  &bt BT_SEL 3  &kp LGUI      &kp LCTRL     &kp LSHFT   &none       &kp H     &kp J      &kp K      &kp L      &kp V        &none
-&none  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &kp LALT    &bt BT_CLR     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp INS      &none
-&none  &none  &kp RET  &kp BSPC  &none
+&none  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &kp LALT    &bt BT_CLR  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp INS      &none
+&none  &none         &kp RET       &kp BSPC      &none
                         >;
                 };
 
                 num_layer {
                         bindings = <
-&none  &none   &kp N9  &kp N8  &kp N7  &none     &none  &none               &none             &none            &none      &none
-&none  &kp N3  &kp N2  &kp N1  &kp N0  &kp HASH  &none  &hmr RSHIFT DOLLAR  &hmr RCTRL CARET  &hmr RGUI TILDE  &kp GRAVE  &none
-&none  &none   &kp N6  &kp N5  &kp N4  &kp AT    &none  &kp RALT            &none             &none            &none      &none
-&none  &kp DEL  &kp TAB  &none  &none
+&none  &none    &kp N9   &kp N8  &kp N7  &none     &none  &none               &none             &none            &none      &none
+&none  &kp N3   &kp N2   &kp N1  &kp N0  &kp HASH  &none  &hmr RSHIFT DOLLAR  &hmr RCTRL CARET  &hmr RGUI TILDE  &kp GRAVE  &none
+&none  &none    &kp N6   &kp N5  &kp N4  &kp AT    &none  &kp RALT            &none             &none            &none      &none
+&none  &kp DEL  &kp TAB  &none   &none
                         >;
                 };
 
@@ -91,7 +91,7 @@
 &none  &kp F1          &kp F2           &kp F3      &kp F4     &kp F5        &kp F8  &kp F9     &kp F10    &kp F11   &kp F12  &none
 &none  &kp KP_NUMLOCK  &kp LGUI         &kp LCTRL   &kp LSHFT  &kp F6        &kp F7  &kp LSHFT  &kp LCTRL  &kp RGUI  &none    &none
 &none  &kp SCROLLLOCK  &kp PAUSE_BREAK  &kp PSCRN   &kp LALT   &out OUT_TOG  &none   &kp LALT   &none      &none     &none    &none
-&none  &trans  &trans  &trans  &none
+&none  &trans          &trans           &trans      &none
                         >;
                 };
         };
