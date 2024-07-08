@@ -64,7 +64,7 @@
 &none     &kp COMMA  &kp Y        &kp O         &kp F           &kp SQT    &kp Z   &kp D           &kp C         &kp L        &kp B  &none
 &none     &kp U      &hml LGUI I  &hml LCTRL A  &hmls LSHIFT H  &kp Q      &kp X   &hmrs RSHIFT T  &hmr RCTRL S  &hmr RGUI R  &kp N  &none
 &none     &kp K      &kp J        &kp DOT       &hml LALT P     &kp SEMI   &marks  &hmr RALT M     &kp G         &kp W        &kp V  &none
-&kp none  &lt 1 E    &kp ESC      &lt 2 SPACE   &kp K_LOCK
+&kp none  &lt 1 E    &kp ESC      &lt 2 SPACE   &K_LOCK
                         >;
                 };
 
