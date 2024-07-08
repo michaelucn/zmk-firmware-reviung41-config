@@ -54,5 +54,11 @@
                 COMBO(inner_tucky_l, &kp PERCENT, <17 29>)
 
                 COMBO(caps_word, &caps_word, <16 19>)
+
+                combo_alt0 {
+                        key-positions = <19 31>;
+                        layers = <2>;
+                        bindings = LA(N0);
+                    }
         };
 };
