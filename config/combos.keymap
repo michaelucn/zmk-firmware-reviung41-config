@@ -58,7 +58,7 @@
                 combo_alt0 {
                         key-positions = <19 31>;
                         layers = <2>;
-                        bindings = <LA(N0)>;
+                        bindings = <&kp LA(N0)>;
                 };
         };
 };
