@@ -61,7 +61,7 @@
                         bindings = <&kp LA(N0)>;
                 };
 
-                combo_alt0 {
+                combo_gui0 {
                         key-positions = <19 21>;
                         layers = <2>;
                         bindings = <&kp LG(N0)>;
