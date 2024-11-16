@@ -62,8 +62,8 @@
                 default_layer {
                         bindings = <
 &none     &kp COMMA  &kp Y        &kp O         &kp F           &kp SQT    &kp Z   &kp D           &kp C         &kp L        &kp B  &none
-&none     &kp U      &hml LGUI I  &hml LCTRL A  &hmls LSHIFT H  &kp Q      &kp X   &hmrs RSHIFT T  &hmr RCTRL S  &hmr RGUI R  &kp N  &none
-&none     &kp K      &kp J        &kp DOT       &hml LALT P     &kp SEMI   &marks  &hmr RALT M     &kp G         &kp W        &kp V  &none
+&none     &kp U      &hml LGUI I  &hml LCTRL A  &hmls LSHIFT H  &kp Q      &kp X   &hmrs LSHIFT T  &hmr LCTRL S  &hmr LGUI R  &kp N  &none
+&none     &kp K      &kp J        &kp DOT       &hml LALT P     &kp SEMI   &marks  &hmr LALT M     &kp G         &kp W        &kp V  &none
 &none     &lt 1 E    &kp TAB      &lt 2 SPACE   &kp K_LOCK
                         >;
                 };
@@ -80,8 +80,8 @@
                 num_layer {
                         bindings = <
 &none  &none    &kp N6   &kp N5  &kp N4  &kp HASH  &none  &kp DOLLAR        &kp CARET  &kp TILDE    &none      &none
-&none  &none    &kp N3   &kp N2  &kp N1  &kp N0    &none  &kp RSHIFT        &kp RCTRL  &kp RGUI     &kp GRAVE  &none
-&none  &none    &kp N9   &kp N8  &kp N7  &kp AT    &none  &hmr RALT DOLLAR  &kp AMPS   &kp PERCENT  &none      &none
+&none  &none    &kp N3   &kp N2  &kp N1  &kp N0    &none  &kp LSHIFT        &kp LCTRL  &kp LGUI     &kp GRAVE  &none
+&none  &none    &kp N9   &kp N8  &kp N7  &kp AT    &none  &kp LALT          &kp AMPS   &kp PERCENT  &none      &none
 &none  &kp DEL  &trans  &none   &none
                         >;
                 };
@@ -89,7 +89,7 @@
                 function_layer {
                         bindings = <
 &none  &kp F1          &kp F2           &kp F3      &kp F4     &kp F5        &kp F8  &kp F9     &kp F10    &kp F11   &kp F12  &none
-&none  &kp KP_NUMLOCK  &kp LGUI         &kp LCTRL   &kp LSHFT  &kp F6        &kp F7  &kp LSHFT  &kp LCTRL  &kp RGUI  &none    &none
+&none  &kp KP_NUMLOCK  &kp LGUI         &kp LCTRL   &kp LSHFT  &kp F6        &kp F7  &kp LSHFT  &kp LCTRL  &kp LGUI  &none    &none
 &none  &kp SCROLLLOCK  &kp PAUSE_BREAK  &kp PSCRN   &kp LALT   &out OUT_TOG  &none   &kp LALT   &none      &none     &none    &none
 &none  &trans          &trans           &trans      &none
                         >;
