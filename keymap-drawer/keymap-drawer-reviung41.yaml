@@ -1,0 +1,40 @@
+layout: {qmk_keyboard: reviung/reviung41}
+layers:
+  default:
+  - ['', {t: ',', s: '<'}, Y, O, F, {t: "'", s: '"'}, Z, D, C, L, B, '']
+  - ['', U, {t: I, h: LGUI}, {t: A, h: LCTRL}, {t: H, h: LSHIFT}, Q, X, {t: T, h: RSHIFT}, {t: S, h: RCTRL}, {t: R, h: RGUI}, N, '']
+  - ['', K, J, {t: ., s: '>'}, {t: P, h: LALT}, {t: ;, s: ':'}, {t: '?', s: '!'}, {t: M, h: RALT}, G, W, V, '']
+  - ['', {t: E, h: nav}, TAB, {t: SPACE, h: num}, LOCK]
+
+  nav:
+  - ['', MUTE, PREV, PP, NEXT, STOP, LEFT, DOWN, UP, RIGHT, CMENU, '']
+  - ['', {t: BT, h: '3'}, LGUI, LCTRL, LSHFT, '', H, J, K, L, V, '']
+  - [ '', {t: BT, h: '2'}, {t: BT, h: '1'}, {t: BT, h: '0'}, LALT, BT CLR, HOME, PG DN, PG UP, END, INS, '']
+  - ['', {type: held}, {t: ▽, type: trans}, BSPC, '']
+  
+  num:
+  - ['', '', '6', '5', '4', '#', '', $, ^, '~', '', '']
+  - ['', '', '3', '2', '1', '0', '', RSHIFT, RCTRL, RGUI, '`', '']
+  - ['', '', '9', '8', '7', '@', '', {t: $, h: RALT}, '&', '%', '', '']
+  - ['', DEL, {t: ▽, type: trans}, {type: held}, '']
+
+  function:
+  - ['', F1, F2, F3, F4, F5, F8, F9, F10, F11, F12, '']
+  - ['', KP NUMLOCK, LGUI, LCTRL, LSHFT, F6, F7, LSHFT, LCTRL, RGUI, '', '']
+  - ['', SCROLLLOCK, PAUSE BREAK, PSCRN, LALT, OUT TOG, '', LALT, '', '', '', '']
+  - ['', {type: held}, {t: ▽, type: trans}, {type: held}, '']
+  
+
+combos:
+- {p: [1,2], k: '*', layers: [default]}
+- {p: [2,3], k: {t: '[', s: '{'}, layers: [default]}
+- {p: [3,4], k: {t: '(', s: '\'}, layers: [default]}
+- {p: [4,5], k: {t: '-', s: '_'}, layers: [default]}
+
+- {p: [6,7], k: {t: '=', s: '+'}, layers: [default]}
+- {p: [7,8], k: {t: ')', s: '/'}, layers: [default]}
+- {p: [8,9], k: {t: ']', s: '}'}, layers: [default]}
+- {p: [9,10], k: '|', layers: [default]}
+
+- {p: [27, 28], k: "ESC", layers: [default]}
+- {p: [31, 32], k: "RET", layers: [default]}
