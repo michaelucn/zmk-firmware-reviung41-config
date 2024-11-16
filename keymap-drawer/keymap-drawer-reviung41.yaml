@@ -2,26 +2,26 @@ layout: {qmk_keyboard: reviung/reviung41}
 layers:
   default:
   - ['', {t: ',', s: '<'}, Y, O, F, {t: "'", s: '"'}, Z, D, C, L, B, '']
-  - ['', U, {t: I, h: LGUI}, {t: A, h: LCTRL}, {t: H, h: LSHIFT}, Q, X, {t: T, h: RSHIFT}, {t: S, h: RCTRL}, {t: R, h: RGUI}, N, '']
-  - ['', K, J, {t: ., s: '>'}, {t: P, h: LALT}, {t: ;, s: ':'}, {t: '?', s: '!'}, {t: M, h: RALT}, G, W, V, '']
+  - ['', U, {t: I, h: LGUI}, {t: A, h: LCTRL}, {t: H, h: LSHIFT}, Q, X, {t: T, h: LSHIFT}, {t: S, h: LCTRL}, {t: R, h: LGUI}, N, '']
+  - ['', K, J, {t: ., s: '>'}, {t: P, h: LALT}, {t: ;, s: ':'}, {t: '?', s: '!'}, {t: M, h: LALT}, G, W, V, '']
   - ['', {t: E, h: nav}, TAB, {t: SPACE, h: num}, LOCK]
 
   nav:
   - ['', MUTE, PREV, PP, NEXT, STOP, LEFT, DOWN, UP, RIGHT, CMENU, '']
-  - ['', {t: BT, h: '3'}, LGUI, LCTRL, LSHFT, '', H, J, K, L, V, '']
-  - [ '', {t: BT, h: '2'}, {t: BT, h: '1'}, {t: BT, h: '0'}, LALT, BT CLR, HOME, PG DN, PG UP, END, INS, '']
+  - ['', BRI UP, LGUI, LCTRL, LSHFT, '', H, J, K, L, V, '']
+  - [ '', BRI DN, VOL DN, VOL UP, LALT, '', HOME, PG DN, PG UP, END, INS, '']
   - ['', {type: held}, {t: ▽, type: trans}, BSPC, '']
   
   num:
   - ['', '', '6', '5', '4', '#', '', $, ^, '~', '', '']
-  - ['', '', '3', '2', '1', '0', '', RSHIFT, RCTRL, RGUI, '`', '']
-  - ['', '', '9', '8', '7', '@', '', {t: $, h: RALT}, '&', '%', '', '']
+  - ['', '', '3', '2', '1', '0', '', LSHIFT, LCTRL, LGUI, '`', '']
+  - ['', '', '9', '8', '7', '@', '', LALT, '&', '%', '', '']
   - ['', DEL, {t: ▽, type: trans}, {type: held}, '']
 
   function:
   - ['', F1, F2, F3, F4, F5, F8, F9, F10, F11, F12, '']
-  - ['', KP NUMLOCK, LGUI, LCTRL, LSHFT, F6, F7, LSHFT, LCTRL, RGUI, '', '']
-  - ['', SCROLLLOCK, PAUSE BREAK, PSCRN, LALT, OUT TOG, '', LALT, '', '', '', '']
+  - ['', KP NUMLOCK, LGUI, LCTRL, LSHFT, F6, F7, LSHFT, LCTRL, LGUI, BT 3, '']
+  - ['', SCROLLLOCK, PAUSE BREAK, PSCRN, LALT, OUT TOG, BT CLR, LALT, BT 0, BT 1, BT 2, '']
   - ['', {type: held}, {t: ▽, type: trans}, {type: held}, '']
   
 
@@ -36,5 +36,5 @@ combos:
 - {p: [8,9], k: {t: ']', s: '}'}, layers: [default]}
 - {p: [9,10], k: '|', layers: [default]}
 
-- {p: [27, 28], k: "ESC", layers: [default]}
-- {p: [31, 32], k: "RET", layers: [default]}
+- {p: [26, 27, 28], k: "ESC", a: bottom, layers: [default]}
+- {p: [31, 32, 33], k: "RET", a: bottom, layers: [default]}
