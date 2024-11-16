@@ -50,8 +50,8 @@
                 COMBO(middle_l, &morph_brace_bracket_l, <3 15>)
                 COMBO(ring_l, &kp STAR, <2 14>)
 
-                COMBO(enter, &kp ENTER, <31 32>)
-                COMBO(escape, &kp ESC, <27 28>)
+                COMBO(enter, &kp ENTER, <31 32 33>)
+                COMBO(escape, &kp ESC, <26 27 28>)
 
                 COMBO(caps_word, &caps_word, <16 19>)
         };
