@@ -79,10 +79,10 @@
 
                 num_layer {
                         bindings = <
-&none  &kp e    &kp N6   &kp N5  &kp N4  &kp PERCENT  &none  &kp DOLLAR  &kp CARET  &kp TILDE  &none      &none
-&none  &kp N0   &kp N3   &kp N2  &kp N1  &kp AMPS     &none  &kp LSHIFT  &kp LCTRL  &kp LGUI   &kp GRAVE  &none
-&none  &kp AT   &kp N9   &kp N8  &kp N7  &kp HASH     &none  &kp LALT    &none      &none      &none      &none
-&none  &kp DEL  &trans  &none   &none
+&none  &kp STAR  &kp N6   &kp N5  &kp N4  &kp PERCENT  &none  &kp DOLLAR  &kp CARET  &kp TILDE  &none      &none
+&none  &kp N0    &kp N3   &kp N2  &kp N1  &kp AMPS     &none  &kp LSHIFT  &kp LCTRL  &kp LGUI   &kp GRAVE  &none
+&none  &kp AT    &kp N9   &kp N8  &kp N7  &kp HASH     &none  &kp LALT    &none      &none      &none      &none
+&none  &kp DEL   &trans  &none   &none
                         >;
                 };
 
