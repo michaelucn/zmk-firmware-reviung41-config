@@ -11,20 +11,19 @@ layers:
   - ['', BRI UP, LGUI, LCTRL, LSHFT, '', H, J, K, L, V, '']
   - [ '', BRI DN, VOL DN, VOL UP, LALT, '', HOME, PG DN, PG UP, END, INS, '']
   - ['', {type: held}, {t: ▽, type: trans}, BSPC, '']
-  
+
   num:
-  - ['', '', '6', '5', '4', '#', '', $, ^, '~', '', '']
-  - ['', '', '3', '2', '1', '0', '', LSHIFT, LCTRL, LGUI, '`', '']
-  - ['', '', '9', '8', '7', '@', '', LALT, '&', '%', '', '']
+  - ['', '*', '6', '5', '4', '%', '', $, ^, '~', '', '']
+  - ['', '0', '3', '2', '1', '&', '', LSHIFT, LCTRL, LGUI, '`', '']
+  - ['', '@', '9', '8', '7', '#', '', LALT, '', '', '', '']
   - ['', DEL, {t: ▽, type: trans}, {type: held}, '']
 
   function:
-  - ['', F1, F2, F3, F4, F5, F8, F9, F10, F11, F12, '']
-  - ['', KP NUMLOCK, LGUI, LCTRL, LSHFT, F6, F7, LSHFT, LCTRL, LGUI, BT 3, '']
-  - ['', SCROLLLOCK, PAUSE BREAK, PSCRN, LALT, OUT TOG, BT CLR, LALT, BT 0, BT 1, BT 2, '']
+  - ['', F1, F2, F3, F4, '',  BT CLR, BT 0, BT 1, BT 2, BT 3, '']
+  - ['', F5, F6, F7, F8, '', OUT TOG, LSHFT, LCTRL, LGUI, PSCRN, '']
+  - ['', F9, F10, F11, F12, '', '', LALT, NUM LOCK, SCROLL LOCK, PAUSE BREAK, '']
   - ['', {type: held}, {t: ▽, type: trans}, {type: held}, '']
   
-
 combos:
 - {p: [1,2], k: '*', layers: [default]}
 - {p: [2,3], k: {t: '[', s: '{'}, layers: [default]}
