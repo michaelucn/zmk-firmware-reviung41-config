@@ -67,6 +67,11 @@
     acceleration-exponent = <0>;
 };
 
+&mmv_input_listener {
+    layers = <4>;
+    input-processors = <&zip_xy_scaler 1 2>;
+}
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -103,7 +108,16 @@
 &none  &none  &none     &none      &none      &none  &none  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &mkp MB2  &none
 &none  &none  &kp LGUI  &kp LCTRL  &kp LSHFT  &none  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB1  &none
 &none  &none  &none     &none      &kp LALT   &none  &none  &msc SCRL_LEFT  &none           &msc SCRL_RIGHT  &mkp MB3  &none
-&none  &none  &none  &none  &none
+&none  &none  &none  &mo 4  &none
+                        >;
+                };
+
+                mouse2_layer {
+                        bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans
                         >;
                 };
 
