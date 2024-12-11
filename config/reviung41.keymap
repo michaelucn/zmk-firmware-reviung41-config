@@ -70,7 +70,7 @@
 &mmv_input_listener {
     layers = <4>;
     input-processors = <&zip_xy_scaler 1 2>;
-}
+};
 
 / {
         keymap {
