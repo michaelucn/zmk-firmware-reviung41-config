@@ -4,6 +4,9 @@
  * SPDX-License-Identifier: MIT
  */
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+
 #include "combos.keymap"
 #include <behaviors.dtsi>
 #include <input/processors.dtsi>
@@ -55,6 +58,13 @@
                         then-layer = <4>;
                 };
         };
+};
+
+&mmv {
+    x-input-code = <INPUT_REL_X>;
+    y-input-code = <INPUT_REL_Y>;
+    time-to-max-speed-ms = <300>;
+    acceleration-exponent = <2>;
 };
 
 / {
