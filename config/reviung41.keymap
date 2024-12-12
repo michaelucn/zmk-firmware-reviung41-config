@@ -5,7 +5,7 @@
  */
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 5
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 500
 
 #include "combos.keymap"
 #include <behaviors.dtsi>
@@ -107,7 +107,7 @@
 
                 mouse_layer {
                         bindings = <
-&none  &none  &none     &none      &none      &none  &none  &msc MOVE_Y(50) &mmv MOVE_UP    &msc MOVE_UP     &mkp MB2  &none
+&none  &none  &none     &none      &none      &none  &none  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &mkp MB2  &none
 &none  &none  &kp LGUI  &kp LCTRL  &kp LSHFT  &none  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB1  &none
 &none  &none  &none     &none      &kp LALT   &none  &none  &msc SCRL_LEFT  &none           &msc SCRL_RIGHT  &mkp MB3  &none
 &none  &none  &none  &mo 4  &none
