@@ -80,9 +80,9 @@
 
                 default_layer {
                         bindings = <
-&none  &kp F    &kp P        &kp D         &kp L           &kp X   &kp SEMI   &kp O           &kp U         &kp Y        &kp B  &none
+&none  &kp F    &kp P        &kp D         &kp L           &kp X   &kp Q      &kp O           &kp U         &kp Y        &kp B  &none
 &none  &kp S    &hml LGUI N  &hml LCTRL T  &hmls LSHIFT H  &kp K   &kp COMMA  &hmrs LSHIFT A  &hmr LCTRL E  &hmr LGUI I  &kp C  &none
-&none  &marks   &kp W        &kp G         &hml LALT M     &kp J   &kp Q      &hmr LALT DOT   &kp Z         &kp SQT      &kp V  &none
+&none  &marks   &kp W        &kp G         &hml LALT M     &kp J   &kp SEMI   &hmr LALT DOT   &kp Z         &kp SQT      &kp V  &none
 &mo 3  &lt 1 R  &kp TAB      &lt 2 SPACE   &none
                         >;
                 };
