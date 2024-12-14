@@ -4,8 +4,17 @@
  * SPDX-License-Identifier: MIT
  */
 
+// Pointer Values
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 400
+
+// Layers
+#define ALPHA_L 0
+#define NAV_L 1
+#define NUM_SYM_L 2
+#define MOUSE_L 3
+#define MOUSE_FINE_L 4
+#define FUNC_L 5
 
 #include "combos.keymap"
 #include <behaviors.dtsi>
@@ -19,7 +28,7 @@
 #define RIGHT_KEYS <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 36 37 38 39 40>
 #define LEFT_KEYS <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38 39 40>
 
-
+// Home Row Mods
 #define HM(NAME, HOLD_TRIGGER_KEYS, REQUIRED_IDLE)\
         hm##NAME: homerow_mods_##NAME {\
                 compatible = "zmk,behavior-hold-tap";\
@@ -59,8 +68,8 @@
 
 &mmv_input_listener {
     fine {
-        layers = <4>;
-        input-processors = <&zip_xy_scaler 1 4>;
+        layers = <MOUSE_FINE_L>;
+        input-processors = <&zip_xy_scaler 1 4>; // equivalent to 300
     };
 };
 
@@ -68,43 +77,43 @@
         keymap {
                 compatible = "zmk,keymap";
 
-                default_layer {
+                ALPHA_L {
                         bindings = <
 &none  &kp F    &kp P        &kp D         &kp L           &kp X   &kp Q      &kp O           &kp U         &kp Y        &kp B  &none
 &none  &kp S    &hml LGUI N  &hml LCTRL T  &hmls LSHIFT H  &kp K   &kp COMMA  &hmrs LSHIFT A  &hmr LCTRL E  &hmr LGUI I  &kp C  &none
 &none  &marks   &kp W        &kp G         &hml LALT M     &kp J   &kp SEMI   &hmr LALT DOT   &kp Z         &kp SQT      &kp V  &none
-&mo 3  &lt 1 R  &kp TAB      &lt 2 SPACE   &mo 5
+&mo MOUSE_L  &lt NAV_L R  &kp TAB  &lt NUM_SYM_L SPACE  &mo FUNC_L
                         >;
                 };
 
-                nav_layer {
+                NAV_L {
                         bindings = <
 &none  &kp C_MUTE    &kp C_PREV    &kp C_PP      &kp C_NEXT  &kp C_STOP  &kp PG_UP  &kp HOME      &kp UP      &kp END       &kp INS       &none
 &none  &kp C_BRI_UP  &kp LGUI      &kp LCTRL     &kp LSHFT   &none       &kp PG_DN  &kp LEFT      &kp DOWN    &kp RIGHT     &kp PSCRN     &none
 &none  &kp C_BRI_DN  &kp C_VOL_DN  &kp C_VOL_UP  &kp LALT    &none       &none      &out OUT_TOG  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &none
-&none  &none         &trans        &kp BSPC      &none
+&none  &none  &none  &kp BSPC  &none
                         >;
                 };
 
-                num_layer {
+                NUM_SYM_L {
                         bindings = <
 &none  &kp AT    &kp N6   &kp N5  &kp N4  &kp PERCENT  &none  &kp DOLLAR  &kp CARET  &kp TILDE  &none      &none
 &none  &kp N0    &kp N3   &kp N2  &kp N1  &kp AMPS     &none  &kp LSHIFT  &kp LCTRL  &kp LGUI   &kp GRAVE  &none
 &none  &kp STAR  &kp N9   &kp N8  &kp N7  &kp HASH     &none  &kp LALT    &none      &none      &none      &none
-&none  &kp DEL   &trans  &none   &none
+&none  &kp DEL  &trans  &none  &none
                         >;
                 };
 
-                mouse_layer {
+                MOUSE_L {
                         bindings = <
 &none  &none  &none     &none      &none      &none  &msc SCRL_UP    &msc SCRL_LEFT   &mmv MOVE_UP    &msc SCRL_RIGHT  &mkp MB2  &none
 &none  &none  &kp LGUI  &kp LCTRL  &kp LSHFT  &none  &msc SCRL_DOWN  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB1  &none
 &none  &none  &none     &none      &kp LALT   &none  &none           &kp PAUSE_BREAK  &kp KP_NUMLOCK  &kp SCROLLLOCK   &mkp MB3  &none
-&none  &none  &none  &mo 4  &none
+&none  &none  &none  &mo MOUSE_FINE_L  &none
                         >;
                 };
 
-                mouse2_layer {
+                MOUSE_FINE_L {
                         bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -113,7 +122,7 @@
                         >;
                 };
 
-                function_layer {
+                FUNC_L {
                         bindings = <
 &none  &kp F1  &kp F2   &kp F3   &kp F4   &none  &none  &none      &none      &none     &none  &none
 &none  &kp F5  &kp F6   &kp F7   &kp F8   &none  &none  &kp LSHFT  &kp LCTRL  &kp LGUI  &none  &none
