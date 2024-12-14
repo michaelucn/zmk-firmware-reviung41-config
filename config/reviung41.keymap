@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1000
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 400
 
 #include "combos.keymap"
@@ -50,16 +50,6 @@
         };
 };
 
-/ {
-        conditional_layers {
-                compatible = "zmk,conditional-layers";
-                tri_layer {
-                        if-layers = <1 2>;
-                        then-layer = <5>;
-                };
-        };
-};
-
 &mmv {
     x-input-code = <INPUT_REL_X>;
     y-input-code = <INPUT_REL_Y>;
@@ -70,7 +60,7 @@
 &mmv_input_listener {
     fine {
         layers = <4>;
-        input-processors = <&zip_xy_scaler 1 3>;
+        input-processors = <&zip_xy_scaler 1 4>;
     };
 };
 
@@ -83,7 +73,7 @@
 &none  &kp F    &kp P        &kp D         &kp L           &kp X   &kp Q      &kp O           &kp U         &kp Y        &kp B  &none
 &none  &kp S    &hml LGUI N  &hml LCTRL T  &hmls LSHIFT H  &kp K   &kp COMMA  &hmrs LSHIFT A  &hmr LCTRL E  &hmr LGUI I  &kp C  &none
 &none  &marks   &kp W        &kp G         &hml LALT M     &kp J   &kp SEMI   &hmr LALT DOT   &kp Z         &kp SQT      &kp V  &none
-&mo 3  &lt 1 R  &kp TAB      &lt 2 SPACE   &none
+&mo 3  &lt 1 R  &kp TAB      &lt 2 SPACE   &mo 5
                         >;
                 };
 
@@ -107,9 +97,9 @@
 
                 mouse_layer {
                         bindings = <
-&none  &none  &none     &none      &none      &none  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &mkp MB2  &none
-&none  &none  &kp LGUI  &kp LCTRL  &kp LSHFT  &none  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB1  &none
-&none  &none  &none     &none      &kp LALT   &none  &none           &none           &none           &none            &mkp MB3  &none
+&none  &none  &none     &none      &none      &none  &msc SCRL_UP    &msc SCRL_LEFT   &mmv MOVE_UP    &msc SCRL_RIGHT  &mkp MB2  &none
+&none  &none  &kp LGUI  &kp LCTRL  &kp LSHFT  &none  &msc SCRL_DOWN  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB1  &none
+&none  &none  &none     &none      &kp LALT   &none  &none           &kp PAUSE_BREAK  &kp KP_NUMLOCK  &kp SCROLLLOCK   &mkp MB3  &none
 &none  &none  &none  &mo 4  &none
                         >;
                 };
@@ -125,9 +115,9 @@
 
                 function_layer {
                         bindings = <
-&none  &kp F1  &kp F2   &kp F3   &kp F4   &none  &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &none
-&none  &kp F5  &kp F6   &kp F7   &kp F8   &none  &out OUT_TOG  &kp LSHFT     &kp LCTRL       &kp LGUI        &kp PSCRN        &none
-&none  &kp F9  &kp F10  &kp F11  &kp F12  &none  &none         &kp LALT      &kp KP_NUMLOCK  &kp SCROLLLOCK  &kp PAUSE_BREAK  &none
+&none  &kp F1  &kp F2   &kp F3   &kp F4   &none  &none  &none      &none      &none     &none  &none
+&none  &kp F5  &kp F6   &kp F7   &kp F8   &none  &none  &kp LSHFT  &kp LCTRL  &kp LGUI  &none  &none
+&none  &kp F9  &kp F10  &kp F11  &kp F12  &none  &none  &kp LALT   &none      &none     &none  &none
 &none  &trans  &trans  &trans  &none
                         >;
                 };
