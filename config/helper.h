@@ -77,9 +77,9 @@
                 #binding-cells = <2>; \
                 flavor = "balanced"; \
                 tapping-term-ms = <500>; \
-                quick-tap-ms = <QUICK_TAP_TERM>; \
+                quick-tap-ms = <500>; \
                 bindings = <&kp>, <&kp>; \
-                require-prior-idle-ms = <required_idle>; \
+                require-prior-idle-ms = <500>; \
                 hold-trigger-key-positions = <hold_trigger_keys>; \
                 hold_trigger-on-release; \
             }; \
