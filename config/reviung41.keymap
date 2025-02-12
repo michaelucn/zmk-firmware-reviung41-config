@@ -16,7 +16,10 @@
 #define MOUSE_FINE_L 4
 #define FUNC_L 5
 
+#include "helper.h"
+#include "behaviors.dtsi"
 #include "combos.keymap"
+
 #include <behaviors.dtsi>
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/keys.h>

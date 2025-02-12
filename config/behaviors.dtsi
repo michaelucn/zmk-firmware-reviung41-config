@@ -1,0 +1,55 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIF
+ */
+
+
+// CAPS WORD
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
+
+// MOD MORPHS
+MORPH(paren_angle_l, &kp LEFT_PARENTHESIS, &kp LESS_THAN)
+MORPH(paren_angle_r, &kp RIGHT_PARENTHESIS, &kp GREATER_THAN)
+MORPH(star_percent, &kp STAR, &kp PERCENT)
+MORPH(slash, &kp SLASH, &kp BACKSLASH)
+MORPH(marks, &kp QUESTION, &kp EXCLAMATION)
+MORPH(punct, &kp DOT, &kp COMMA)
+MORPH(colons, &kp COLON, &kp SEMICOLON)
+
+// HOMEROW MODS
+HRM(hrml, RIGHT_KEYS, PRIOR_IDLE)
+HRM(hrmls, RIGHT_KEYS, 0)
+HRM(hrmr, LEFT_KEYS, PRIOR_IDLE)
+HRM(hrmrs, LEFT_KEYS, 0)
+
+// MOD-TAP
+/ {
+    behaviors {
+        ht: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&kp>, <&kp>;
+            require-prior-idle-ms = <PRIOR_IDLE>;
+        };
+    };
+};
+
+// TAP-DANCE
+TD(td_up, &ht PG_UP UP, &mmv MOVE_UP)
+TD(td_dn, &ht PG_DN DOWN, &mmv MOVE_DOWN)
+TD(td_left, &ht HOME LEFT, &mmv MOVE_LEFT)
+TD(td_right, &ht END RIGHT, &mmv MOVE_RIGHT)
+
+// MOUSE MOVEMENT
+&mmv {
+    x-input-code = <INPUT_REL_X>;
+    y-input-code = <INPUT_REL_Y>;
+    time-to-max-speed-ms = <0>;
+    acceleration-exponent = <0>;
+}
