@@ -40,14 +40,14 @@ COMBO(caps_word, &kp CAPSLOCK, 15 20, 0)
 COMBO(escape, &kp ESC, 14 15 16, 0)
 COMBO(enter, &kp ENTER, 19 20 21, 0)
 
-COMBO(paren_l, &morph_paren_angle_l, 15 16, 0)
-COMBO(paren_r, &morph_paren_angle_r, 19 20, 0)
+COMBO(paren_l, &paren_angle_l, 15 16, 0)
+COMBO(paren_r, &paren_angle_r, 19 20, 0)
 
 COMBO(bracket_l, &kp LEFT_BRACKET, 27 28, 0)
 COMBO(bracket_r, &kp RIGHT_BRACKET, 31 32, 0)
 
-COMBO(star_percent, &morph_star_percent, 3 16, 0)
-COMBO(slash, &morph_slash, 19 8, 0)
+COMBO(star_percent, &star_percent, 3 16, 0)
+COMBO(slash, &slash, 19 8, 0)
 
 COMBO(minus, &kp MINUS, 14 15, 0)
 COMBO(equal, &kp EQUAL, 20 21, 0)
