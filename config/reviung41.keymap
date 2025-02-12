@@ -16,9 +16,6 @@
 #define MOUSE_FINE_L 4
 #define FUNC_L 5
 
-#include "helper.h"
-#include "behaviors.dtsi"
-
 #include <behaviors.dtsi>
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -26,6 +23,9 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
+
+#include "helper.h"
+#include "behaviors.dtsi"
 
 &mmv_input_listener {
     fine {
