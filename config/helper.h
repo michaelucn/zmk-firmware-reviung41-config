@@ -41,7 +41,7 @@
     #define COMBO_TIMEOUT 30
 #endif
 
-#define COMBO(name, combo_binding, keypos, active_layers) \
+#define COMBO(name, combo_binding, keypos, layers) \
     / { \
         combos { \
             compatible = "zmk,combos"; \
@@ -49,7 +49,7 @@
                 timeout-ms = <COMBO_TIMEOUT>; \
                 bindings = <combo_binding>; \
                 key-positions = <keypos>; \
-                layers = <active_layers>; \
+                layers = <layers>; \
                 require-prior-idle-ms = <PRIOR_IDLE>; \
             }; \
         }; \
