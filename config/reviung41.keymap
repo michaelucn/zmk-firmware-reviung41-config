@@ -50,7 +50,7 @@ COMBO(grave_tilde, &kp GRAVE, 26 27, 0)
 LAYER(TEST, 
     &kp A &kp A
 
-    &kp B &kp B
+                        &kp B &kp B
 )
 
 LAYER(ALPHA,
