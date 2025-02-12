@@ -15,24 +15,25 @@
                 mods = <(MOD_LSFT|MOD_RSFT)>;\
         };
 
-#define COMBO(FINGER, KEY, KEY_POS)\
-        combo_##FINGER {\
+#define COMBO(NAME, KEY, KEY_POS)\
+        combo_##NAME {\
                 key-positions = ##KEY_POS;\
                 layers = <0>;\
                 bindings = <##KEY>;\
         };
 
+#define 
 &caps_word {
         continue-list = <UNDERSCORE MINUS>;
 };
 
 / {
         behaviors {
-                MORPH(paren_slash_r, &kp RIGHT_PARENTHESIS, &kp SLASH)
-                MORPH(brace_bracket_r, &kp RIGHT_BRACE, &kp RIGHT_BRACKET)
+                MORPH(paren_angle_l, &kp LEFT_PARENTHESIS, &kp LESS_THAN)
+                MORPH(paren_angle_r, &kp RIGHT_PARENTHESIS, &kp GREATER_THAN)
 
-                MORPH(paren_slash_l, &kp LEFT_PARENTHESIS, &kp BACKSLASH)
-                MORPH(brace_bracket_l, &kp LEFT_BRACE, &kp LEFT_BRACKET)
+                MORPH(star_percent, &kp STAR, &kp PERCENT)
+                MORPH(slash, &kp SLASH, &kp BACKSLASH)
         };
 };
 
@@ -40,17 +41,30 @@
         combos {
                 compatible = "zmk,combos";
 
-                COMBO(index_r, &morph_paren_slash_r, <19 20>)
-                COMBO(middle_r, &morph_brace_bracket_r, <19 21>)
-                COMBO(inner_r, &kp EQUAL, <20 21>)
+                COMBO(caps_lock, &caps_word, <16 19>)
+                COMBO(caps_word, &kp CAPSLOCK, <15 20>)
 
-                COMBO(index_l, &morph_paren_slash_l, <16 15>)
-                COMBO(middle_l, &morph_brace_bracket_l, <16 14>)
-                COMBO(inner_l, &kp MINUS, <14 15>)
+                COMBO(escape, &kp ESC, <14 15 16>)
+                COMBO(enter, &kp ENTER, <19 20 21>)
 
-                COMBO(enter, &kp ENTER, <19 22>)
-                COMBO(escape, &kp ESC, <16 13>)
+                COMBO(paren_l, &morph_paren_angle_l, <15 16>)
+                COMBO(paren_r, &morph_paren_angle_r, <19 20>)
 
-                COMBO(caps_word, &caps_word, <16 19>)
+                COMBO(bracket_l, &kp LEFT_BRACKET, <27 28>)
+                COMBO(bracket_r, &kp RIGHT_BRACKET, <31 32>)
+
+                COMBO(star_percent, &star_percent, <3 16>)
+                COMBO(slash, &morph_slash, <19 8>)
+
+                COMBO(minus, &kp MINUS, <14 15>)
+                COMBO(equal, &kp EQUAL, <20 21>)
+
+                COMBO(pipe, &kp PIPE, <3 4>)
+                COMBO(hash, &kp HASH, <7 8>)
+
+                COMBO(ampersand, &kp AMPERSAND, <2 3>)
+                COMBO(dollar, &kp DOLLAR, <8 9>)
+
+                COMBO(grave_tilde, &kp GRAVE, <26 27>)
         };
 };
