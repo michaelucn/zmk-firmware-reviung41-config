@@ -17,87 +17,86 @@
 #define FUNC 3
 
 #if !defined QUICK_TAP_TERM
-#define QUICK_TAP_TERM 200
+    #define QUICK_TAP_TERM 200
 #endif
 
 #if !defined PRIOR_IDLE
-#define PRIOR_IDLE 200
+    #define PRIOR_IDLE 200
 #endif
 
 // LAYERS
-#define LAYER(name, layout)                                                    \
-  / {                                                                          \
-    keymap {                                                                   \
-      compatible = "zmk,keymap";                                               \
-      name {                                                                   \
-        display - name = #name;                                                \
-        bindings = <layout>;                                                   \
-      };                                                                       \
-    };                                                                         \
-  };
+#define LAYER(name, layout) \
+    / { \
+        keymap { \
+            compatible = "zmk,keymap"; \
+            name { \
+                display-name = #name; \
+                bindings = <layout>; \
+            }; \
+        }; \
+    };
 
 // COMBOS
 #if !defined COMBO_TIMEOUT
-#define COMBO_TIMEOUT 30
+    #define COMBO_TIMEOUT 30
 #endif
 
-#define COMBO(name, bindings, keypos, layers)                                  \
-  / {                                                                          \
-    combos {                                                                   \
-      compatible = "zmk,combos";                                               \
-      combo_##name {                                                           \
-        timeout - ms = <COMBO_TIMOUT>;                                         \
-        bindings = <bindings>;                                                 \
-        key - positions = <keypos>;                                            \
-        layers = <layers>;                                                     \
-        require - prior - idle - ms = <PRIOR_IDLE>;                            \
-      };                                                                       \
-    };                                                                         \
-  };
+#define COMBO(name, bindings, keypos, layers) \
+    / { \
+        combos { \
+            compatible = "zmk,combos"; \
+            combo_ ## name { \
+                timeout-ms = <COMBO_TIMOUT>; \
+                bindings = <bindings>; \
+                key-positions = <keypos>; \
+                layers = <layers>; \
+                require-prior-idle-ms = <PRIOR_IDLE>; \
+            }; \
+        }; \
+    };
 
 // MOD MORPH
-#define MORPH(name, base_binding, mod_binding)                                 \
-  / {                                                                          \
-    behaviors {                                                                \
-    name:                                                                      \
-      name {                                                                   \
-        compatible = "zmk,behavior-mod-morph";                                 \
-        #binding - cells = <0>;                                                \
-        bindings = <base_binding>, <mod_binding>;                              \
-        mods = <(MOD_LSFT | MOD_RSFT)>;                                        \
-      };                                                                       \
-    };                                                                         \
-  };
+#define MORPH(name, base_binding, mod_binding) \
+    / { \
+        behaviors { \
+            name: name { \
+                compatible = "zmk,behavior-mod-morph"; \
+                #binding-cells = <0>; \
+                bindings = <base_binding>, <mod_binding>; \
+                mods = <(MOD_LSFT|MOD_RSFT)>; \
+            }; \
+        }; \
+    };
 
 // HOMEROW MODS
-#define HRM(name, hold_trigger_keys, required_idle)                            \
-  / {                                                                          \
-    behaviors {                                                                \
-    name:                                                                      \
-      name {                                                                   \
-        compatible = "zmk,behavior-hold-tap";                                  \
-        #binding - cells = <2>;                                                \
-        flavor = "balanced";                                                   \
-        tapping - term - ms = <500>;                                           \
-        quick - tap - ms = <QUICK_TAP_TERM>;                                   \
-        bindings = <&kp>, <&kp>;                                               \
-        require - prior - idle - ms = <required_idle>;                         \
-        hold - trigger - key - positions = <hold_trigger_keys>;                \
-        hold_trigger - on - release;                                           \
-      };                                                                       \
-    };                                                                         \
-  };
+#define HRM(name, hold_trigger_keys, required_idle) \
+    / { \
+        behaviors { \
+            name: name { \
+                compatible = "zmk,behavior-hold-tap"; \
+                #binding-cells = <2>; \
+                flavor = "balanced"; \
+                tapping-term-ms = <500>; \
+                quick-tap-ms = <QUICK_TAP_TERM>; \
+                bindings = <&kp>, <&kp>; \
+                require-prior-idle-ms = <required_idle>; \
+                hold-trigger-key-positions = <hold_trigger_keys>; \
+                hold_trigger-on-release; \
+            }; \
+        }; \
+    };
+
 
 // TAP-DANCE
-#define TD(name, tap, dance)                                                   \
-  / {                                                                          \
-    behaviors {                                                                \
-    name:                                                                      \
-      name {                                                                   \
-        compatible = "zmk,behavior-tap-dance";                                 \
-        #binding - cells = <0>;                                                \
-        tapping - term - ms = <200>;                                           \
-        bindings = <tap>, <dance>;                                             \
-      };                                                                       \
-    };                                                                         \
-  };
+#define TD(name, tap, dance) \
+    / { \
+        behaviors { \
+            name: name { \
+                compatible = "zmk,behavior-tap-dance"; \
+                #binding-cells = <0>; \
+                tapping-term-ms = <200>; \
+                bindings = <tap>, <dance>; \
+            }; \
+        }; \
+    };
+
