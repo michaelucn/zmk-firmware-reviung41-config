@@ -20,7 +20,7 @@ MORPH(punct, &kp DOT, &kp COMMA)
 MORPH(colons, &kp COLON, &kp SEMICOLON)
 
 // HOMEROW MODS
-HRM(hrml, RIGHT_KEYS, 0)
+HRM(hrml, RIGHT_KEYS, PRIOR_IDLE)
 HRM(hrmls, RIGHT_KEYS, 0)
 HRM(hrmr, LEFT_KEYS, PRIOR_IDLE)
 HRM(hrmrs, LEFT_KEYS, 0)
