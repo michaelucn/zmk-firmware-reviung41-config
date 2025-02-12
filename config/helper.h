@@ -31,7 +31,7 @@
             compatible = "zmk,keymap"; \
             name { \
                 display-name = #name; \
-                bindings = <layout>; \
+                bindings = layout; \
             }; \
         }; \
     };
