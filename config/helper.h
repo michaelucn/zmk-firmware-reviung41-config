@@ -8,8 +8,8 @@
 #define __ &trans
 #define xx &none
 
-#define LEFT_KEYS <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38 39 40>
-#define RIGHT_KEYS <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 36 37 38 39 40>
+#define LEFT_KEYS 1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38 39 40
+#define RIGHT_KEYS 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 36 37 38 39 40
 
 #define ALPHA 0
 #define NAV 1
@@ -81,7 +81,7 @@
                 bindings = <&kp>, <&kp>; \
                 require-prior-idle-ms = <required_idle>; \
                 hold-trigger-key-positions = <hold_trigger_keys>; \
-                hold_trigger-on-release = true; \
+                hold_trigger-on-release; \
             }; \
         }; \
     };
