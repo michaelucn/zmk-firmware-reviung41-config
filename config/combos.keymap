@@ -22,7 +22,6 @@
                 bindings = <##KEY>;\
         };
 
-#define 
 &caps_word {
         continue-list = <UNDERSCORE MINUS>;
 };
