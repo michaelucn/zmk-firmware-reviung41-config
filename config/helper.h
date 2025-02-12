@@ -30,8 +30,8 @@
         keymap { \
             compatible = "zmk,keymap"; \
             name { \
-                bindings = <layout>; \
                 display-name = #name; \
+                bindings = <layout>; \
             }; \
         }; \
     };
