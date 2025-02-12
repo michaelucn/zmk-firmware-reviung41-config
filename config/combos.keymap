@@ -52,7 +52,7 @@
                 COMBO(bracket_l, &kp LEFT_BRACKET, <27 28>)
                 COMBO(bracket_r, &kp RIGHT_BRACKET, <31 32>)
 
-                COMBO(star_percent, &star_percent, <3 16>)
+                COMBO(star_percent, &morph_star_percent, <3 16>)
                 COMBO(slash, &morph_slash, <19 8>)
 
                 COMBO(minus, &kp MINUS, <14 15>)
