@@ -52,4 +52,4 @@ TD(td_right, &ht END RIGHT, &mmv MOVE_RIGHT)
     y-input-code = <INPUT_REL_Y>;
     time-to-max-speed-ms = <0>;
     acceleration-exponent = <0>;
-}
+};
