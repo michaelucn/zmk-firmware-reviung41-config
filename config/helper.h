@@ -46,7 +46,7 @@
         combos { \
             compatible = "zmk,combos"; \
             combo_ ## name { \
-                timeout-ms = <COMBO_TIMOUT>; \
+                timeout-ms = <COMBO_TIMEOUT>; \
                 bindings = <bindings>; \
                 key-positions = <keypos>; \
                 layers = <layers>; \
