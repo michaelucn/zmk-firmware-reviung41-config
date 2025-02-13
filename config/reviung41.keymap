@@ -47,14 +47,16 @@ COMBO(dollar, &kp DOLLAR, 8 9, 0)
 COMBO(grave_tilde, &kp GRAVE, 26 27, 0)
 
 // LAYERS
+// 0
 LAYER(ALPHA,
     &none  &kp F   &kp P          &kp D         &kp L            &kp X        &kp Q      &kp O               &kp U         &kp Y          &kp B  &none
     &none  &kp S   &hrml LCTRL N  &hrml LGUI T  &hrmls LSHIFT H  &kp K        &colons    &hrmrs LSHIFT A     &hrmr LGUI E  &hrmr LCTRL I  &kp C  &none
     &none  &marks  &kp W          &kp G         &hrml LALT M     &kp J        &kp COMMA  &hrmr_stops LALT 0  &kp Z         &kp SQT        &kp V  &none
 
-                                        &none  &lt NAV R  &kp TAB  &lt NUM SPACE  &mo FUNC
+                                        &none  &lt 1 R  &kp TAB  &lt 2 SPACE  &mo 3
 )
 
+// 1
 LAYER(NAV,
     &none  &kp C_MUTE    &kp C_PREV    &kp C_PP      &kp C_NEXT  &kp C_STOP        &msc SCRL_UP    &kp BSPC        &nav_up  &kp DEL          &mkp MB2  &none
     &none  &kp C_BRI_UP  &kp LCTRL     &kp LGUI      &kp LSHFT   &none             &msc SCRL_DOWN  &nav_left       &nav_dn  &nav_right       &mkp MB1  &none
@@ -63,6 +65,7 @@ LAYER(NAV,
                                         &none  &none  &none  &none  &none
 )
 
+// 2
 LAYER(NUM,
     &none  &none   &kp N6   &kp N5  &kp N4  &none        &none  &none       &none     &none      &none  &none
     &none  &kp N0  &kp N3   &kp N2  &kp N1  &none        &none  &kp LSHIFT  &kp LGUI  &kp LCTRL  &none  &none
@@ -71,6 +74,7 @@ LAYER(NUM,
                                         &none  &none  &none  &none  &none
 )
 
+// 3
 LAYER(FUNC,
     &none  &none    &kp F6  &kp F5  &kp F4  &none          &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bootloader  &none
     &none  &kp F10  &kp F3  &kp F2  &kp F1  &kp F11        &out OUT_TOG  &kp LSHFT     &kp LCTRL     &kp LGUI      &sys_reset   &none
