@@ -47,6 +47,7 @@ COMBO(dollar, &kp DOLLAR, 8 9, 0)
 COMBO(grave_tilde, &kp GRAVE, 26 27, 0)
 
 // LAYERS
+#define TEST 0
 LAYER(TEST, 
     &kp A &kp A
 
