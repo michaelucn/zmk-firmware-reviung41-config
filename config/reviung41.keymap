@@ -47,41 +47,34 @@ COMBO(dollar, &kp DOLLAR, 8 9, 0)
 COMBO(grave_tilde, &kp GRAVE, 26 27, 0)
 
 // LAYERS
-#define TEST 0
-LAYER(TEST, 
-    &none  &kp F   &kp P          &kp D         &kp L            &kp X        &kp Q      &kp O            &kp U         &kp Y          &kp B  &none
-
-                        &kp B &kp B
-)
-
 LAYER(ALPHA,
-    xxx  &kp F   &kp P          &kp D         &kp L            &kp X        &kp Q      &kp O            &kp U         &kp Y          &kp B  xxx
-    xxx  &kp S   &hrml LCTRL N  &hrml LGUI T  &hrmls LSHIFT H  &kp K        &kp COMMA  &hrmrs LSHIFT A  &hrmr LGUI E  &hrmr LCTRL I  &kp C  xxx
-    xxx  &marks  &kp W          &kp G         &hml LALT M      &kp J        &kp SEMI   &hmr LALT DOT    &kp Z         &kp SQT        &kp V  xxx
+    &none  &kp F   &kp P          &kp D         &kp L            &kp X        &kp Q      &kp O            &kp U         &kp Y          &kp B  &none
+    &none  &kp S   &hrml LCTRL N  &hrml LGUI T  &hrmls LSHIFT H  &kp K        &kp COMMA  &hrmrs LSHIFT A  &hrmr LGUI E  &hrmr LCTRL I  &kp C  &none
+    &none  &marks  &kp W          &kp G         &hml LALT M      &kp J        &kp SEMI   &hmr LALT DOT    &kp Z         &kp SQT        &kp V  &none
 
-                                        xxx  &lt NAV R  &kp TAB  &lt NUM SPACE  &mo FUNC
+                                        &none  &lt NAV R  &kp TAB  &lt NUM SPACE  &mo FUNC
 )
 
 LAYER(NAV,
-    xxx  &kp C_MUTE    &kp C_PREV    &kp C_PP      &kp C_NEXT  &kp C_STOP        &msc SCRL_UP    &kp BSPC        &nav_up  &kp DEL          &mkp MB2  xxx
-    xxx  &kp C_BRI_UP  &kp LCTRL     &kp LGUI      &kp LSHFT   xxx               &msc SCRL_DOWN  &nav_left       &nav_dn  &nav_right       &mkp MB1  xxx
-    xxx  &kp C_BRI_DN  &kp C_VOL_DN  &kp C_VOL_UP  &kp LALT    xxx               &kp PSCRN       &msc SCRL_LEFT  &kp INS  &msc SCRL_RIGHT  &mkp MB3  xxx
+    &none  &kp C_MUTE    &kp C_PREV    &kp C_PP      &kp C_NEXT  &kp C_STOP        &msc SCRL_UP    &kp BSPC        &nav_up  &kp DEL          &mkp MB2  &none
+    &none  &kp C_BRI_UP  &kp LCTRL     &kp LGUI      &kp LSHFT   &none             &msc SCRL_DOWN  &nav_left       &nav_dn  &nav_right       &mkp MB1  &none
+    &none  &kp C_BRI_DN  &kp C_VOL_DN  &kp C_VOL_UP  &kp LALT    &none             &kp PSCRN       &msc SCRL_LEFT  &kp INS  &msc SCRL_RIGHT  &mkp MB3  &none
 
-                                        xxx  xxx  xxx  xxx  xxx
+                                        &none  &none  &none  &none  &none
 )
 
 LAYER(NUM,
-    xxx  xxx     &kp N6   &kp N5  &kp N4  xxx        xxx  xxx         xxx       xxx        xxx  xxx
-    xxx  &kp N0  &kp N3   &kp N2  &kp N1  xxx        xxx  &kp LSHIFT  &kp LGUI  &kp LCTRL  xxx  xxx
-    xxx  xxx     &kp N9   &kp N8  &kp N7  xxx        xxx  &kp LALT    xxx       xxx        xxx  xxx
+    &none  &none   &kp N6   &kp N5  &kp N4  &none        &none  &none       &none     &none      &none  &none
+    &none  &kp N0  &kp N3   &kp N2  &kp N1  &none        &none  &kp LSHIFT  &kp LGUI  &kp LCTRL  &none  &none
+    &none  &none   &kp N9   &kp N8  &kp N7  &none        &none  &kp LALT    &none     &none      &none  &none
 
-                                        xxx  xxx  xxx  xxx  xxx
+                                        &none  &none  &none  &none  &none
 )
 
 LAYER(FUNC,
-    xxx  xxx      &kp F6  &kp F5  &kp F4  xxx            &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bootloader  xxx
-    xxx  &kp F10  &kp F3  &kp F2  &kp F1  &kp F11        &out OUT_TOG  &kp LSHFT     &kp LCTRL     &kp LGUI      &sys_reset   xxx
-    xxx  xxx      &kp F9  &kp F8  &kp F7  &kp F12        xxx           &kp LALT      xxx           xxx           xxx          xxx
+    &none  &none    &kp F6  &kp F5  &kp F4  &none          &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bootloader  &none
+    &none  &kp F10  &kp F3  &kp F2  &kp F1  &kp F11        &out OUT_TOG  &kp LSHFT     &kp LCTRL     &kp LGUI      &sys_reset   &none
+    &none  &none    &kp F9  &kp F8  &kp F7  &kp F12        &none         &kp LALT      &none         &none         &none        &none
 
-                                        xxx  xxx  xxx  xxx  xxx
+                                        &none  &none  &none  &none  &none
 )
