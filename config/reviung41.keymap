@@ -53,7 +53,7 @@ LAYER(TEST,
     xxx  &kp S   &hrml LCTRL N  &hrml LGUI T  &hrmls LSHIFT H  &kp K        &kp COMMA  &hrmrs LSHIFT A  &hrmr LGUI E  &hrmr LCTRL I  &kp C  xxx
     xxx  &marks  &kp W          &kp G         &hml LALT M      &kp J        &kp SEMI   &hmr LALT DOT    &kp Z         &kp SQT        &kp V  xxx
 
-                        &kp B &kp B
+                                        xxx  &lt NAV R  &kp TAB  &lt NUM SPACE  &mo FUNC
 )
 
 LAYER(ALPHA,
