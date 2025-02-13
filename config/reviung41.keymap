@@ -50,6 +50,8 @@ COMBO(grave_tilde, &kp GRAVE, 26 27, 0)
 #define TEST 0
 LAYER(TEST, 
     xxx  &kp F   &kp P          &kp D         &kp L            &kp X        &kp Q      &kp O            &kp U         &kp Y          &kp B  xxx
+    xxx  &kp S   &hrml LCTRL N  &hrml LGUI T  &hrmls LSHIFT H  &kp K        &kp COMMA  &hrmrs LSHIFT A  &hrmr LGUI E  &hrmr LCTRL I  &kp C  xxx
+    xxx  &marks  &kp W          &kp G         &hml LALT M      &kp J        &kp SEMI   &hmr LALT DOT    &kp Z         &kp SQT        &kp V  xxx
 
                         &kp B &kp B
 )
