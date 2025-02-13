@@ -16,7 +16,7 @@ MORPH(paren_angle_r, &kp RIGHT_PARENTHESIS, &kp GREATER_THAN)
 MORPH(star_percent, &kp STAR, &kp PERCENT)
 MORPH(slash, &kp SLASH, &kp BACKSLASH)
 MORPH(marks, &kp QUESTION, &kp EXCLAMATION)
-MORPH(punct, &kp DOT, &kp COMMA)
+MORPH(stops, &kp DOT, &kp COMMA)
 MORPH(colons, &kp COLON, &kp SEMICOLON)
 
 // HOMEROW MODS
@@ -24,6 +24,23 @@ HRM(hrml, RIGHT_KEYS, PRIOR_IDLE)
 HRM(hrmls, RIGHT_KEYS, 0)
 HRM(hrmr, LEFT_KEYS, PRIOR_IDLE)
 HRM(hrmrs, LEFT_KEYS, 0)
+
+// HOMEROW MOD FOR PUCTUATION BEHAVIOR
+/ { \
+    behaviors { \
+        hrmr_stops: hrmr_punctuation { \
+            compatible = "zmk,behavior-hold-tap"; \
+            #binding-cells = <2>; \
+            flavor = "balanced"; \
+            tapping-term-ms = <500>; \
+            quick-tap-ms = <QUICK_TAP_TERM>; \
+            bindings = <&kp>, <&stops>; \
+            require-prior-idle-ms = <PRIOR_IDLE>; \
+            hold-trigger-key-positions = <LEFT_KEYS>; \
+            hold_trigger-on-release; \
+        }; \
+    }; \
+};
 
 // MOD-TAP
 / {
@@ -41,10 +58,10 @@ HRM(hrmrs, LEFT_KEYS, 0)
 };
 
 // TAP-DANCE
-TD(td_up, &ht PG_UP UP, &mmv MOVE_UP)
-TD(td_dn, &ht PG_DN DOWN, &mmv MOVE_DOWN)
-TD(td_left, &ht HOME LEFT, &mmv MOVE_LEFT)
-TD(td_right, &ht END RIGHT, &mmv MOVE_RIGHT)
+TD(nav_up, &ht PG_UP UP, &mmv MOVE_UP)
+TD(nav_dn, &ht PG_DN DOWN, &mmv MOVE_DOWN)
+TD(nav_left, &ht HOME LEFT, &mmv MOVE_LEFT)
+TD(nav_right, &ht END RIGHT, &mmv MOVE_RIGHT)
 
 // MOUSE MOVEMENT
 &mmv {
