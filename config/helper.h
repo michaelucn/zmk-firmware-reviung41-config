@@ -78,7 +78,7 @@
                 bindings = <&kp>, <&kp>; \
                 require-prior-idle-ms = <required_idle>; \
                 hold-trigger-key-positions = <hold_trigger_keys>; \
-                hold_trigger-on-release; \
+                hold-trigger-on-release; \
             }; \
         }; \
     };

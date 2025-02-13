@@ -37,7 +37,7 @@ HRM(hrmrs, LEFT_KEYS, 0)
             bindings = <&kp>, <&stops>; \
             require-prior-idle-ms = <PRIOR_IDLE>; \
             hold-trigger-key-positions = <LEFT_KEYS>; \
-            hold_trigger-on-release; \
+            hold-trigger-on-release; \
         }; \
     }; \
 };
