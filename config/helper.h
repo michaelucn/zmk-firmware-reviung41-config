@@ -30,7 +30,7 @@
             compatible = "zmk,keymap"; \
             name { \
                 display-name = #layer_name; \
-                bindings = <layout>; \
+                bindings = layout; \
             }; \
         }; \
     };
