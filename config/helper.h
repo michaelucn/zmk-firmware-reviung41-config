@@ -10,10 +10,10 @@
 #define LEFT_KEYS 1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38 39 40
 #define RIGHT_KEYS 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 36 37 38 39 40
 
-#define ALPHA_ 0
-#define NAV_ 1
-#define NUM_ 2
-#define FUNC_ 3
+#define ALPHA 0
+#define NAV 1
+#define NUM 2
+#define FUNC 3
 
 #if !defined QUICK_TAP_TERM
     #define QUICK_TAP_TERM 200
