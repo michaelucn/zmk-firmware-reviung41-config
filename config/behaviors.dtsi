@@ -17,7 +17,7 @@ MORPH(star_percent, &kp STAR, &kp PERCENT)
 MORPH(slash, &kp SLASH, &kp BACKSLASH)
 MORPH(marks, &kp QUESTION, &kp EXCLAMATION)
 MORPH(stops, &kp DOT, &kp COMMA)
-MORPH(colons, &kp COLON, &kp SEMICOLON)
+// MORPH(colons, &kp COLON, &kp SEMICOLON)
 
 // HOMEROW MODS
 HRM(hrml, RIGHT_KEYS, PRIOR_IDLE)
