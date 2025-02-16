@@ -49,6 +49,7 @@ HRM(hrmrs, LEFT_KEYS, 0)
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
+            tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_TERM>;
             bindings = <&kp>, <&kp>;
             require-prior-idle-ms = <PRIOR_IDLE>;
@@ -62,6 +63,7 @@ HRM(hrmrs, LEFT_KEYS, 0)
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
+            tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_TERM>;
             bindings = <&mmv>, <&mmv>;
             require-prior-idle-ms = <PRIOR_IDLE>;
