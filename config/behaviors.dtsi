@@ -57,11 +57,19 @@ HRM(hrmrs, LEFT_KEYS, 0)
     };
 };
 
-// TAP-DANCE
-TD(nav_up, &ht PG_UP UP, &mmv MOVE_UP)
-TD(nav_dn, &ht PG_DN DOWN, &mmv MOVE_DOWN)
-TD(nav_left, &ht HOME LEFT, &mmv MOVE_LEFT)
-TD(nav_right, &ht END RIGHT, &mmv MOVE_RIGHT)
+/ {
+    behaviors {
+        mst: mouse_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mmv>, <&mmv>;
+            require-prior-idle-ms = <PRIOR_IDLE>;
+        };
+    };
+};
 
 // MOUSE MOVEMENT
 &mmv {

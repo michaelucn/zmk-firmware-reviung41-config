@@ -12,8 +12,17 @@
 
 #define ALPHA 0
 #define NAV 1
-#define NUM 2
-#define FUNC 3
+#define MOUSE 2
+#define NUM 3
+#define FUNC 4
+
+#define MSPD_SLOW 400
+#define MSPD_FAST 1000
+
+#define M_UP MOUSE_X(MSPD_SLOW) MOUSE_X(MSPD_FAST)
+#define M_DOWN MOUSE_X(-MSPD_SLOW) MOUSE_X(-MSPD_FAST)
+#define M_LEFT MOUSE_Y(-MSPD_SLOW) MOUSE_Y(-MSPD_FAST)
+#define M_RIGHT MOUSE_Y(MSPD_SLOW) MOUSE_Y(MSPD_FAST)
 
 #if !defined QUICK_TAP_TERM
     #define QUICK_TAP_TERM 200
