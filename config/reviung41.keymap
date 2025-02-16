@@ -110,8 +110,8 @@ LAYER(Base,
         Nav { \
             display-name = "Mouse"; \
             bindings = <
-     &none  &trans  &trans  &trans  &trans  &trans        &trans  &trans       M_UP    &trans        &mkp MB2  &none
-     &none  &trans  &trans  &trans  &trans  &trans        &trans  &mst M_LEFT  &mst M_DOWN  &mst M_RIGHT  &mkp MB1  &none
+     &none  &trans  &trans  &trans  &trans  &trans        &trans  &trans       &mst MOUSE_X(MSPD_SLOW) MOUSE_X(MSPD_FAST)    &trans        &mkp MB2  &none
+     &none  &trans  &trans  &trans  &trans  &trans        &trans  &mst MOUSE_Y(-MSPD_SLOW) MOUSE_Y(-MSPD_FAST)  &mst MOUSE_X(-MSPD_SLOW) MOUSE_X(-MSPD_FAST)  &mst MOUSE_Y(MSPD_SLOW) MOUSE_Y(MSPD_FAST)  &mkp MB1  &none
      &none  &trans  &trans  &trans  &trans  &trans        &trans  &trans       &trans       &trans        &mkp MB3  &none
  
                                          &none  &none  &none  &none  &none
