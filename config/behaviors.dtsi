@@ -67,7 +67,7 @@ HRM(hrmrs, LEFT_KEYS, 0)
             quick-tap-ms = <QUICK_TAP_TERM>;
             bindings = <&mmv>, <&mmv>;
             require-prior-idle-ms = <PRIOR_IDLE>;
-            hold-while-undecided;
+            hold-while-undecided-linger;
         };
     };
 };
