@@ -60,7 +60,7 @@ LAYER(Nav,
     &none  &kp C_BRI_DN  &kp C_VOL_DN  &kp C_VOL_UP  &kp LALT    &none             &none           &msc SCRL_LEFT  &kp INS         &msc SCRL_RIGHT  &mkp MB3  &none
 
                                         &none  &none  &none  &none  &none
->)
+)
 
 LAYER(Mouse,
     &none  &trans  &trans  &trans  &trans  &trans        &trans  &trans       &mst M_UP    &trans        &mkp MB2  &none
@@ -68,7 +68,7 @@ LAYER(Mouse,
     &none  &trans  &trans  &trans  &trans  &trans        &trans  &trans       &trans       &trans        &mkp MB3  &none
 
                                         &none  &none  &none  &none  &none
->)
+)
 
 LAYER(Num,
     &none  &none   &kp N6   &kp N5  &kp N4  &none        &none  &none       &none     &none      &none  &none
