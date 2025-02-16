@@ -19,10 +19,10 @@
 #define MSPD_SLOW 400
 #define MSPD_FAST 1000
 
-#define M_UP MOVE_X(MSPD_SLOW) MOVE_X(MSPD_FAST)
-#define M_DOWN MOVE_X(-MSPD_SLOW) MOVE_X(-MSPD_FAST)
-#define M_LEFT MOVE_Y(-MSPD_SLOW) MOVE_Y(-MSPD_FAST)
-#define M_RIGHT MOVE_Y(MSPD_SLOW) MOVE_Y(MSPD_FAST)
+#define M_UP MOVE_Y(MSPD_SLOW) MOVE_Y(MSPD_FAST)
+#define M_DOWN MOVE_Y(-MSPD_SLOW) MOVE_Y(-MSPD_FAST)
+#define M_LEFT MOVE_X(-MSPD_SLOW) MOVE_X(-MSPD_FAST)
+#define M_RIGHT MOVE_X(MSPD_SLOW) MOVE_X(MSPD_FAST)
 
 #if !defined QUICK_TAP_TERM
     #define QUICK_TAP_TERM 200
@@ -37,7 +37,7 @@
     / { \
         keymap { \
             compatible = "zmk,keymap"; \
-            name { \
+            layer_name { \
                 display-name = #layer_name; \
                 bindings = <layout>; \
             }; \

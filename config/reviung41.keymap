@@ -46,7 +46,6 @@ COMBO(bspc, &kp BSPC, 15 16, 1)
 COMBO(delete, &kp DEL, 16 17, 1)
 
 // LAYERS
-// 0
 LAYER(Base,
     &none  &kp F   &kp P          &kp D         &kp L            &kp X        &kp Q        &kp O               &kp U         &kp Y          &kp B  &none
     &none  &kp S   &hrml LCTRL N  &hrml LGUI T  &hrmls LSHIFT H  &kp K        &kp SEMI     &hrmrs LSHIFT A     &hrmr LGUI E  &hrmr LCTRL I  &kp C  &none
@@ -55,99 +54,34 @@ LAYER(Base,
                                         &mo MOUSE  &lt NAV R  &kp TAB  &lt NUM SPACE  &mo FUNC
 )
 
-// LAYER(Nav,
-//     &none  &kp C_MUTE    &kp C_PREV    &kp C_PP      &kp C_NEXT  &kp C_STOP        &msc SCRL_UP    &kp PSCRN       &ht PG_UP UP      &kp TAB          &mkp MB2  &none
-//     &none  &kp C_BRI_UP  &kp LCTRL     &kp LGUI      &kp LSHFT   &none             &msc SCRL_DOWN  &ht HOME LEFT   &ht PG_DOWN DOWN  &ht END RIGHT    &mkp MB1  &none
-//     &none  &kp C_BRI_DN  &kp C_VOL_DN  &kp C_VOL_UP  &kp LALT    &none             &none           &msc SCRL_LEFT  &kp INS           &msc SCRL_RIGHT  &mkp MB3  &none
-// 
-//                                         &none  &none  &none  &none  &none
-// >)
-// 
-// LAYER(Mouse,
-//     &none  &trans  &trans  &trans  &trans  &trans        &trans  &trans       &mst M_UP    &trans        &mkp MB2  &none
-//     &none  &trans  &trans  &trans  &trans  &trans        &trans  &mst M_LEFT  &mst M_DOWN  &mst M_RIGHT  &mkp MB1  &none
-//     &none  &trans  &trans  &trans  &trans  &trans        &trans  &trans       &trans       &trans        &mkp MB3  &none
-// 
-//                                         &none  &none  &none  &none  &none
-// >)
-//
-// LAYER(Num,
-//     &none  &none   &kp N6   &kp N5  &kp N4  &none        &none  &none       &none     &none      &none  &none
-//     &none  &kp N0  &kp N3   &kp N2  &kp N1  &none        &none  &kp LSHIFT  &kp LGUI  &kp LCTRL  &none  &none
-//     &none  &none   &kp N9   &kp N8  &kp N7  &none        &none  &kp LALT    &none     &none      &none  &none
-// 
-//                                         &none  &none  &none  &none  &none
-// )
-// 
-// LAYER(Func,
-//     &none  &none    &kp F6  &kp F5  &kp F4  &none          &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bootloader  &none
-//     &none  &kp F10  &kp F3  &kp F2  &kp F1  &kp F11        &out OUT_TOG  &kp LSHFT     &kp LCTRL     &kp LGUI      &sys_reset   &none
-//     &none  &none    &kp F9  &kp F8  &kp F7  &kp F12        &none         &kp LALT      &none         &none         &none        &none
-// 
-//                                         &none  &none  &none  &none  &none
-// )
+LAYER(Nav,
+    &none  &kp C_MUTE    &kp C_PREV    &kp C_PP      &kp C_NEXT  &kp C_STOP        &msc SCRL_UP    &kp PSCRN       &ht PG_UP UP      &kp TAB          &mkp MB2  &none
+    &none  &kp C_BRI_UP  &kp LCTRL     &kp LGUI      &kp LSHFT   &none             &msc SCRL_DOWN  &ht HOME LEFT   &ht PG_DOWN DOWN  &ht END RIGHT    &mkp MB1  &none
+    &none  &kp C_BRI_DN  &kp C_VOL_DN  &kp C_VOL_UP  &kp LALT    &none             &none           &msc SCRL_LEFT  &kp INS           &msc SCRL_RIGHT  &mkp MB3  &none
 
-// Temporary Non-macro Solution
-/ { \
-    keymap { \
-        compatible = "zmk,keymap"; \
-        Nav { \
-            display-name = "Nav"; \
-            bindings = <
-     &none  &kp C_MUTE    &kp C_PREV    &kp C_PP      &kp C_NEXT  &kp C_STOP        &msc SCRL_UP    &kp PSCRN       &ht PG_UP UP    &kp TAB          &mkp MB2  &none
-     &none  &kp C_BRI_UP  &kp LCTRL     &kp LGUI      &kp LSHFT   &none             &msc SCRL_DOWN  &ht HOME LEFT   &ht PG_DN DOWN  &ht END RIGHT    &mkp MB1  &none
-     &none  &kp C_BRI_DN  &kp C_VOL_DN  &kp C_VOL_UP  &kp LALT    &none             &none           &msc SCRL_LEFT  &kp INS         &msc SCRL_RIGHT  &mkp MB3  &none
- 
-                                         &none  &none  &none  &none  &none
-            >; \
-        }; \
-    }; \
-};
+                                        &none  &none  &none  &none  &none
+>)
 
-/ { \
-    keymap { \
-        compatible = "zmk,keymap"; \
-        Nav { \
-            display-name = "Mouse"; \
-            bindings = <
-     &none  &trans  &trans  &trans  &trans  &trans        &trans  &trans       &mst M_UP    &trans        &mkp MB2  &none
-     &none  &trans  &trans  &trans  &trans  &trans        &trans  &mst M_LEFT  &mst M_DOWN  &mst M_RIGHT  &mkp MB1  &none
-     &none  &trans  &trans  &trans  &trans  &trans        &trans  &trans       &trans       &trans        &mkp MB3  &none
- 
-                                         &none  &none  &none  &none  &none
-            >; \
-        }; \
-    }; \
-};
+LAYER(Mouse,
+    &none  &trans  &trans  &trans  &trans  &trans        &trans  &trans       &mst M_UP    &trans        &mkp MB2  &none
+    &none  &trans  &trans  &trans  &trans  &trans        &trans  &mst M_LEFT  &mst M_DOWN  &mst M_RIGHT  &mkp MB1  &none
+    &none  &trans  &trans  &trans  &trans  &trans        &trans  &trans       &trans       &trans        &mkp MB3  &none
 
-/ { \
-    keymap { \
-        compatible = "zmk,keymap"; \
-        Num { \
-            display-name = "Num"; \
-            bindings = <
+                                        &none  &none  &none  &none  &none
+>)
+
+LAYER(Num,
     &none  &none   &kp N6   &kp N5  &kp N4  &none        &none  &none       &none     &none      &none  &none
     &none  &kp N0  &kp N3   &kp N2  &kp N1  &none        &none  &kp LSHIFT  &kp LGUI  &kp LCTRL  &none  &none
     &none  &none   &kp N9   &kp N8  &kp N7  &none        &none  &kp LALT    &none     &none      &none  &none
 
                                         &none  &none  &none  &none  &none
-            >; \
-        }; \
-    }; \
-};
+)
 
-/ { \
-    keymap { \
-        compatible = "zmk,keymap"; \
-        Func { \
-            display-name = "Func"; \
-            bindings = <
+LAYER(Func,
     &none  &none    &kp F6  &kp F5  &kp F4  &none          &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bootloader  &none
     &none  &kp F10  &kp F3  &kp F2  &kp F1  &kp F11        &out OUT_TOG  &kp LSHFT     &kp LCTRL     &kp LGUI      &sys_reset   &none
     &none  &none    &kp F9  &kp F8  &kp F7  &kp F12        &none         &kp LALT      &none         &none         &none        &none
 
                                         &none  &none  &none  &none  &none
-            >; \
-        }; \
-    }; \
-};
+)
