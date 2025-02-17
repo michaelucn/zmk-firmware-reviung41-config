@@ -63,8 +63,8 @@ LAYER(Nav,
 )
 
 LAYER(Mouse,
-    &none  &trans  &trans  &trans  &trans  &trans        &trans  &trans       &mst M_UP    &trans        &mkp MB2  &none
-    &none  &trans  &trans  &trans  &trans  &trans        &trans  &mst M_LEFT  &mst M_DOWN  &mst M_RIGHT  &mkp MB1  &none
+    &none  &trans  &trans  &trans  &trans  &trans        &trans  &trans       &mouse_up    &trans        &mkp MB2  &none
+    &none  &trans  &trans  &trans  &trans  &trans        &trans  &mouse_left  &mouse_down  &mouse_right  &mkp MB1  &none
     &none  &trans  &trans  &trans  &trans  &trans        &trans  &trans       &trans       &trans        &mkp MB3  &none
 
                                         &none  &none  &none  &none  &none

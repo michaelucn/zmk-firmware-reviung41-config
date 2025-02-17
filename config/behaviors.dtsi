@@ -17,6 +17,11 @@ MORPH(star_percent, &kp STAR, &kp PERCENT)
 MORPH(slash, &kp SLASH, &kp BACKSLASH)
 MORPH(marks, &kp QUESTION, &kp EXCLAMATION)
 MORPH(stops, &kp DOT, &kp COMMA)
+
+MORPH(mouse_up, &mmv MOVE_Y(-MSPD_SLOW), &mmv MOVE_Y(-MSPD_FAST))
+MORPH(mouse_down, &mmv MOVE_Y(MSPD_SLOW), &mmv MOVE_Y(MSPD_FAST))
+MORPH(mouse_left, &mmv MOVE_X(-MSPD_SLOW), &mmv MOVE_X(-MSPD_FAST))
+MORPH(mouse_right, &mmv MOVE_X(MSPD_SLOW), &mmv MOVE_X(MSPD_FAST))
 // MORPH(colons, &kp COLON, &kp SEMICOLON)
 
 // HOMEROW MODS
@@ -52,20 +57,6 @@ HRM(hrmrs, LEFT_KEYS, 0)
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_TERM>;
             bindings = <&kp>, <&kp>;
-            require-prior-idle-ms = <PRIOR_IDLE>;
-        };
-    };
-};
-
-/ {
-    behaviors {
-        mst: mouse_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <2>;
-            quick-tap-ms = <QUICK_TAP_TERM>;
-            bindings = <&mmv>, <&mmv>;
             require-prior-idle-ms = <PRIOR_IDLE>;
         };
     };
