@@ -19,7 +19,7 @@
 COMBO(caps_lock, &caps_word, 16 19, 0)
 COMBO(caps_word, &kp CAPSLOCK, 15 20, 0)
 
-COMBO(escape, &kp ESC, 14 15 16, 0)
+COMBO(escape, &kp ENTER, 14 15 16, 0)
 COMBO(enter, &kp ENTER, 19 20 21, 0)
 
 COMBO(paren_l, &paren_angle_l, 15 16, 0)
@@ -42,8 +42,8 @@ COMBO(dollar, &kp DOLLAR, 8 9, 0)
 
 COMBO(grave_tilde, &kp GRAVE, 26 27, 0)
 
-COMBO(bspc, &kp BSPC, 14 16, 1)
-COMBO(delete, &kp DEL, 14 17, 1)
+COMBO(bspc, &kp BSPC, 15 16, 1)
+\\COMBO(delete, &kp DEL, 16 17, 1)
 
 // LAYERS
 LAYER(Base,
