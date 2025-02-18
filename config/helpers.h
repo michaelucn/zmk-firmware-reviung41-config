@@ -1,31 +1,10 @@
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
- * SPDX-License-Identifier: MIF
+ * SPDX-License-Identifier: MIT
  */
 
 #pragma once
-
-// GLOBAL
-#define LEFT_KEYS 1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38 39 40
-#define RIGHT_KEYS 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 36 37 38 39 40
-
-#define ALPHA 0
-#define NAV 1
-#define MOUSE 2
-#define NUM 3
-#define FUNC 4
-
-#define MSPD_SLOW 400
-#define MSPD_FAST 1000
-
-#if !defined QUICK_TAP_TERM
-    #define QUICK_TAP_TERM 200
-#endif
-
-#if !defined PRIOR_IDLE
-    #define PRIOR_IDLE 200
-#endif
 
 // LAYERS
 #define LAYER(layer_name, layout) \
@@ -53,25 +32,28 @@
                 bindings = <combo_binding>; \
                 key-positions = <keypos>; \
                 layers = <active_layers>; \
-                require-prior-idle-ms = <PRIOR_IDLE>; \
             }; \
         }; \
     };
 
 // MOD MORPH
-#define MORPH(name, base_binding, mod_binding) \
+#define MORPH(name, base_binding, modified_binding) \
     / { \
         behaviors { \
             name: name { \
                 compatible = "zmk,behavior-mod-morph"; \
                 #binding-cells = <0>; \
-                bindings = <base_binding>, <mod_binding>; \
+                bindings = <base_binding>, <modified_binding>; \
                 mods = <(MOD_LSFT|MOD_RSFT)>; \
             }; \
         }; \
     };
 
-// HOMEROW MODS
+// HOME ROW MODIFIER
+#if !defined QUICK_TAP_TERM
+    #define QUICK_TAP_TERM 200
+#endif
+
 #define HRM(name, hold_trigger_keys, required_idle) \
     / { \
         behaviors { \
@@ -88,18 +70,3 @@
             }; \
         }; \
     };
-
-
-// TAP-DANCE
-#define TD(name, tap, dance) \
-    / { \
-        behaviors { \
-            name: name { \
-                compatible = "zmk,behavior-tap-dance"; \
-                #binding-cells = <0>; \
-                tapping-term-ms = <200>; \
-                bindings = <tap>, <dance>; \
-            }; \
-        }; \
-    };
-

@@ -12,8 +12,15 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#include "helper.h"
+#include "helpers.h"
 #include "behaviors.dtsi"
+
+// MACROS
+#define ALPHA 0
+#define NAV 1
+#define MOUSE 2
+#define NUM 3
+#define FUNC 4
 
 // COMBOS
 COMBO(caps_lock, &caps_word, 16 19, 0)

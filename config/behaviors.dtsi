@@ -1,14 +1,20 @@
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
- * SPDX-License-Identifier: MIF
+ * SPDX-License-Identifier: MIT
  */
 
+// MACROS
+#define THUMB_KEYS 36 37 38 39 40
+#define LEFT_KEYS 1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 THUMB_KEYS
+#define RIGHT_KEYS 6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 THUMB_KEYS
 
-// CAPS WORD
-&caps_word {
-    continue-list = <UNDERSCORE MINUS DELETE BACKSPACE>;
-};
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 400
+#define MSPD_SLOW 400
+#define MSPD_FAST 1000
+
+#define IDLE_REQUIRED 200
+#define QUICK_TAP_TERM 200
 
 // MOD MORPHS
 MORPH(paren_angle_l, &kp LEFT_PARENTHESIS, &kp LESS_THAN)
@@ -22,12 +28,11 @@ MORPH(mouse_up, &mmv MOVE_Y(-MSPD_SLOW), &mmv MOVE_Y(-MSPD_FAST))
 MORPH(mouse_down, &mmv MOVE_Y(MSPD_SLOW), &mmv MOVE_Y(MSPD_FAST))
 MORPH(mouse_left, &mmv MOVE_X(-MSPD_SLOW), &mmv MOVE_X(-MSPD_FAST))
 MORPH(mouse_right, &mmv MOVE_X(MSPD_SLOW), &mmv MOVE_X(MSPD_FAST))
-// MORPH(colons, &kp COLON, &kp SEMICOLON)
 
 // HOMEROW MODS
-HRM(hrml, RIGHT_KEYS, PRIOR_IDLE)
+HRM(hrml, RIGHT_KEYS, IDLE_REQUIRED)
 HRM(hrmls, RIGHT_KEYS, 0)
-HRM(hrmr, LEFT_KEYS, PRIOR_IDLE)
+HRM(hrmr, LEFT_KEYS, IDLE_REQUIRED)
 HRM(hrmrs, LEFT_KEYS, 0)
 
 // HOMEROW MOD FOR PUCTUATION BEHAVIOR
@@ -40,7 +45,7 @@ HRM(hrmrs, LEFT_KEYS, 0)
             tapping-term-ms = <500>; \
             quick-tap-ms = <QUICK_TAP_TERM>; \
             bindings = <&kp>, <&stops>; \
-            require-prior-idle-ms = <PRIOR_IDLE>; \
+            require-prior-idle-ms = <IDLE_REQUIRED>; \
             hold-trigger-key-positions = <LEFT_KEYS>; \
             hold-trigger-on-release; \
         }; \
@@ -57,15 +62,20 @@ HRM(hrmrs, LEFT_KEYS, 0)
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_TERM>;
             bindings = <&kp>, <&kp>;
-            require-prior-idle-ms = <PRIOR_IDLE>;
+            require-prior-idle-ms = <IDLE_REQUIRED>;
         };
     };
 };
 
-// MOUSE MOVEMENT
+// POINTER
 &mmv {
     x-input-code = <INPUT_REL_X>;
     y-input-code = <INPUT_REL_Y>;
     time-to-max-speed-ms = <0>;
     acceleration-exponent = <0>;
+};
+
+// CAPS WORD
+&caps_word {
+    continue-list = <UNDERSCORE MINUS DELETE BACKSPACE>;
 };
