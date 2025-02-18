@@ -42,9 +42,6 @@ COMBO(dollar, &kp DOLLAR, 8 9, 0)
 
 COMBO(grave_tilde, &kp GRAVE, 26 27, 0)
 
-COMBO(bspc, &kp BSPC, 19 20, 1)
-COMBO(delete, &kp DEL, 20 21, 1)
-
 // LAYERS
 LAYER(Base,
     &none  &kp F   &kp P          &kp D         &kp L            &kp X        &kp Q        &kp O               &kp U         &kp Y          &kp B  &none
@@ -55,9 +52,9 @@ LAYER(Base,
 )
 
 LAYER(Nav,
-    &none  &kp C_MUTE    &kp C_PREV    &kp C_PP      &kp C_NEXT  &kp C_STOP        &msc SCRL_UP    &kp PSCRN       &ht PG_UP UP    &kp TAB          &mkp MB2  &none
-    &none  &kp C_BRI_UP  &kp LCTRL     &kp LGUI      &kp LSHFT   &none             &msc SCRL_DOWN  &ht HOME LEFT   &ht PG_DN DOWN  &ht END RIGHT    &mkp MB1  &none
-    &none  &kp C_BRI_DN  &kp C_VOL_DN  &kp C_VOL_UP  &kp LALT    &none             &none           &msc SCRL_LEFT  &kp INS         &msc SCRL_RIGHT  &mkp MB3  &none
+    &none  &kp C_MUTE    &kp C_PREV    &kp C_PP      &kp C_NEXT  &kp C_STOP        &msc SCRL_UP    &kp PSCRN       &ht PG_UP UP    &kp TAB          &kp BSPC  &none
+    &none  &kp C_BRI_UP  &kp LCTRL     &kp LGUI      &kp LSHFT   &none             &msc SCRL_DOWN  &ht HOME LEFT   &ht PG_DN DOWN  &ht END RIGHT    &kp DEL   &none
+    &none  &kp C_BRI_DN  &kp C_VOL_DN  &kp C_VOL_UP  &kp LALT    &none             &none           &msc SCRL_LEFT  &kp INS         &msc SCRL_RIGHT  &none     &none
 
                                         &none  &none  &none  &none  &none
 )
