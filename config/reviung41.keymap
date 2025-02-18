@@ -52,9 +52,9 @@ LAYER(Base,
 )
 
 LAYER(Nav,
-    &none  &kp C_MUTE    &kp C_PREV    &kp C_PP      &kp C_NEXT  &kp C_STOP        &msc SCRL_UP    &kp PSCRN       &ht PG_UP UP    &kp TAB          &kp BSPC  &none
-    &none  &kp C_BRI_UP  &kp LCTRL     &kp LGUI      &kp LSHFT   &none             &msc SCRL_DOWN  &ht HOME LEFT   &ht PG_DN DOWN  &ht END RIGHT    &kp DEL   &none
-    &none  &kp C_BRI_DN  &kp C_VOL_DN  &kp C_VOL_UP  &kp LALT    &none             &none           &msc SCRL_LEFT  &kp INS         &msc SCRL_RIGHT  &none     &none
+    &none  &kp C_MUTE    &kp C_PREV    &kp C_PP      &kp C_NEXT  &kp C_STOP        &msc SCRL_UP    &kp BSPC        &ht PG_UP UP    &kp DEL          &kp TAB    &none
+    &none  &kp C_BRI_UP  &kp LCTRL     &kp LGUI      &kp LSHFT   &none             &msc SCRL_DOWN  &ht HOME LEFT   &ht PG_DN DOWN  &ht END RIGHT    &kp PSCRN  &none
+    &none  &kp C_BRI_DN  &kp C_VOL_DN  &kp C_VOL_UP  &kp LALT    &none             &none           &msc SCRL_LEFT  &kp INS         &msc SCRL_RIGHT  &none      &none
 
                                         &none  &none  &none  &none  &none
 )
