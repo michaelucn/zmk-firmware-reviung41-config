@@ -16,6 +16,7 @@
 #include "behaviors.dtsi"
 
 // MACROS
+// I'll remove this comment later
 #define ALPHA 0
 #define NAV 1
 #define MOUSE 2
